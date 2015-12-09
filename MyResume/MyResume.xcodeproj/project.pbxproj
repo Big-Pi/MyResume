@@ -7,14 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0EBF0ADF1C18301C00C8CE70 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EBF0ADE1C18301C00C8CE70 /* main.m */; };
-		0EBF0AE21C18301C00C8CE70 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EBF0AE11C18301C00C8CE70 /* AppDelegate.m */; };
-		0EBF0AE51C18301C00C8CE70 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EBF0AE41C18301C00C8CE70 /* ViewController.m */; };
 		0EBF0AE81C18301C00C8CE70 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0EBF0AE61C18301C00C8CE70 /* Main.storyboard */; };
 		0EBF0AEA1C18301C00C8CE70 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0EBF0AE91C18301C00C8CE70 /* Assets.xcassets */; };
 		0EBF0AED1C18301C00C8CE70 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0EBF0AEB1C18301C00C8CE70 /* LaunchScreen.storyboard */; };
 		0EBF0AF81C18301C00C8CE70 /* MyResumeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EBF0AF71C18301C00C8CE70 /* MyResumeTests.m */; };
 		0EBF0B031C18301D00C8CE70 /* MyResumeUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EBF0B021C18301D00C8CE70 /* MyResumeUITests.m */; };
+		0EBF0B221C1830D500C8CE70 /* TextPathHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EBF0B181C1830D500C8CE70 /* TextPathHelper.m */; };
+		0EBF0B231C1830D500C8CE70 /* UIImage+ImageEffects.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EBF0B1A1C1830D500C8CE70 /* UIImage+ImageEffects.m */; };
+		0EBF0B241C1830D500C8CE70 /* HandWrittingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EBF0B1D1C1830D500C8CE70 /* HandWrittingViewController.m */; };
+		0EBF0B251C1830D500C8CE70 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EBF0B201C1830D500C8CE70 /* AppDelegate.m */; };
+		0EBF0B261C1830D500C8CE70 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EBF0B211C1830D500C8CE70 /* main.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,11 +38,6 @@
 
 /* Begin PBXFileReference section */
 		0EBF0ADA1C18301C00C8CE70 /* MyResume.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyResume.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		0EBF0ADE1C18301C00C8CE70 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		0EBF0AE01C18301C00C8CE70 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		0EBF0AE11C18301C00C8CE70 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		0EBF0AE31C18301C00C8CE70 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		0EBF0AE41C18301C00C8CE70 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		0EBF0AE71C18301C00C8CE70 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0EBF0AE91C18301C00C8CE70 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0EBF0AEC1C18301C00C8CE70 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -51,6 +48,15 @@
 		0EBF0AFE1C18301D00C8CE70 /* MyResumeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyResumeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0EBF0B021C18301D00C8CE70 /* MyResumeUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyResumeUITests.m; sourceTree = "<group>"; };
 		0EBF0B041C18301D00C8CE70 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0EBF0B171C1830D500C8CE70 /* TextPathHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TextPathHelper.h; sourceTree = "<group>"; };
+		0EBF0B181C1830D500C8CE70 /* TextPathHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TextPathHelper.m; sourceTree = "<group>"; };
+		0EBF0B191C1830D500C8CE70 /* UIImage+ImageEffects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+ImageEffects.h"; sourceTree = "<group>"; };
+		0EBF0B1A1C1830D500C8CE70 /* UIImage+ImageEffects.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ImageEffects.m"; sourceTree = "<group>"; };
+		0EBF0B1C1C1830D500C8CE70 /* HandWrittingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HandWrittingViewController.h; sourceTree = "<group>"; };
+		0EBF0B1D1C1830D500C8CE70 /* HandWrittingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HandWrittingViewController.m; sourceTree = "<group>"; };
+		0EBF0B1F1C1830D500C8CE70 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		0EBF0B201C1830D500C8CE70 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		0EBF0B211C1830D500C8CE70 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,14 +107,10 @@
 		0EBF0ADC1C18301C00C8CE70 /* MyResume */ = {
 			isa = PBXGroup;
 			children = (
-				0EBF0AE01C18301C00C8CE70 /* AppDelegate.h */,
-				0EBF0AE11C18301C00C8CE70 /* AppDelegate.m */,
-				0EBF0AE31C18301C00C8CE70 /* ViewController.h */,
-				0EBF0AE41C18301C00C8CE70 /* ViewController.m */,
-				0EBF0AE61C18301C00C8CE70 /* Main.storyboard */,
 				0EBF0AE91C18301C00C8CE70 /* Assets.xcassets */,
+				0EBF0B151C1830D500C8CE70 /* App */,
+				0EBF0AE61C18301C00C8CE70 /* Main.storyboard */,
 				0EBF0AEB1C18301C00C8CE70 /* LaunchScreen.storyboard */,
-				0EBF0AEE1C18301C00C8CE70 /* Info.plist */,
 				0EBF0ADD1C18301C00C8CE70 /* Supporting Files */,
 			);
 			path = MyResume;
@@ -117,7 +119,7 @@
 		0EBF0ADD1C18301C00C8CE70 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				0EBF0ADE1C18301C00C8CE70 /* main.m */,
+				0EBF0AEE1C18301C00C8CE70 /* Info.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -138,6 +140,46 @@
 				0EBF0B041C18301D00C8CE70 /* Info.plist */,
 			);
 			path = MyResumeUITests;
+			sourceTree = "<group>";
+		};
+		0EBF0B151C1830D500C8CE70 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				0EBF0B161C1830D500C8CE70 /* Helper */,
+				0EBF0B1B1C1830D500C8CE70 /* Splash */,
+				0EBF0B1E1C1830D500C8CE70 /* Support */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		0EBF0B161C1830D500C8CE70 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				0EBF0B171C1830D500C8CE70 /* TextPathHelper.h */,
+				0EBF0B181C1830D500C8CE70 /* TextPathHelper.m */,
+				0EBF0B191C1830D500C8CE70 /* UIImage+ImageEffects.h */,
+				0EBF0B1A1C1830D500C8CE70 /* UIImage+ImageEffects.m */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		0EBF0B1B1C1830D500C8CE70 /* Splash */ = {
+			isa = PBXGroup;
+			children = (
+				0EBF0B1C1C1830D500C8CE70 /* HandWrittingViewController.h */,
+				0EBF0B1D1C1830D500C8CE70 /* HandWrittingViewController.m */,
+			);
+			path = Splash;
+			sourceTree = "<group>";
+		};
+		0EBF0B1E1C1830D500C8CE70 /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				0EBF0B1F1C1830D500C8CE70 /* AppDelegate.h */,
+				0EBF0B201C1830D500C8CE70 /* AppDelegate.m */,
+				0EBF0B211C1830D500C8CE70 /* main.m */,
+			);
+			path = Support;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -273,9 +315,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0EBF0AE51C18301C00C8CE70 /* ViewController.m in Sources */,
-				0EBF0AE21C18301C00C8CE70 /* AppDelegate.m in Sources */,
-				0EBF0ADF1C18301C00C8CE70 /* main.m in Sources */,
+				0EBF0B231C1830D500C8CE70 /* UIImage+ImageEffects.m in Sources */,
+				0EBF0B221C1830D500C8CE70 /* TextPathHelper.m in Sources */,
+				0EBF0B251C1830D500C8CE70 /* AppDelegate.m in Sources */,
+				0EBF0B241C1830D500C8CE70 /* HandWrittingViewController.m in Sources */,
+				0EBF0B261C1830D500C8CE70 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
