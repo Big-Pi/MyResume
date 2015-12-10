@@ -16,12 +16,64 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7xX-nN-lek">
+                                <rect key="frame" x="44" y="28" width="42" height="21"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" alpha="0.0" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dog" translatesAutoresizingMaskIntoConstraints="NO" id="SEZ-Bf-Mnb">
+                                <rect key="frame" x="60" y="-100" width="480" height="800"/>
+                                <animations/>
+                            </imageView>
+                        </subviews>
                         <animations/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="SEZ-Bf-Mnb" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="W84-xx-bTD"/>
+                            <constraint firstItem="SEZ-Bf-Mnb" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ouU-JV-UOs"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <segue destination="eXM-M6-1tV" kind="show" identifier="show" customClass="MagicTransitionSegue" id="apE-7f-J9F"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="420" y="479"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="czH-C0-YVj">
+            <objects>
+                <viewController id="eXM-M6-1tV" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="2Cz-kt-Byz"/>
+                        <viewControllerLayoutGuide type="bottom" id="CIr-z1-Qgt"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="gXb-1H-09E">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dog" translatesAutoresizingMaskIntoConstraints="NO" id="pH1-Ls-DdU">
+                                <rect key="frame" x="60" y="-100" width="480" height="800"/>
+                                <animations/>
+                            </imageView>
+                        </subviews>
+                        <animations/>
+                        <constraints>
+                            <constraint firstItem="pH1-Ls-DdU" firstAttribute="centerY" secondItem="gXb-1H-09E" secondAttribute="centerY" id="Q6S-Xp-bqM"/>
+                            <constraint firstItem="pH1-Ls-DdU" firstAttribute="centerX" secondItem="gXb-1H-09E" secondAttribute="centerX" id="mWx-9m-Bwx"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mf2-UA-IZF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1080" y="479"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="dog" width="480" height="800"/>
+    </resources>
 </document>

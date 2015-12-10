@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface HandWrittingViewController : UIViewController
-
+@property (weak, nonatomic,readonly) CAShapeLayer *pathLayer;
 
 @end
 

@@ -17,6 +17,7 @@
 		0EBF0B241C1830D500C8CE70 /* HandWrittingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EBF0B1D1C1830D500C8CE70 /* HandWrittingViewController.m */; };
 		0EBF0B251C1830D500C8CE70 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EBF0B201C1830D500C8CE70 /* AppDelegate.m */; };
 		0EBF0B261C1830D500C8CE70 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EBF0B211C1830D500C8CE70 /* main.m */; };
+		0EBF0B291C18813900C8CE70 /* MagicTransitionSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EBF0B281C18813900C8CE70 /* MagicTransitionSegue.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,8 @@
 		0EBF0B1F1C1830D500C8CE70 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		0EBF0B201C1830D500C8CE70 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		0EBF0B211C1830D500C8CE70 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		0EBF0B271C18813900C8CE70 /* MagicTransitionSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MagicTransitionSegue.h; sourceTree = "<group>"; };
+		0EBF0B281C18813900C8CE70 /* MagicTransitionSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MagicTransitionSegue.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -168,6 +171,8 @@
 			children = (
 				0EBF0B1C1C1830D500C8CE70 /* HandWrittingViewController.h */,
 				0EBF0B1D1C1830D500C8CE70 /* HandWrittingViewController.m */,
+				0EBF0B271C18813900C8CE70 /* MagicTransitionSegue.h */,
+				0EBF0B281C18813900C8CE70 /* MagicTransitionSegue.m */,
 			);
 			path = Splash;
 			sourceTree = "<group>";
@@ -315,6 +320,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0EBF0B291C18813900C8CE70 /* MagicTransitionSegue.m in Sources */,
 				0EBF0B231C1830D500C8CE70 /* UIImage+ImageEffects.m in Sources */,
 				0EBF0B221C1830D500C8CE70 /* TextPathHelper.m in Sources */,
 				0EBF0B251C1830D500C8CE70 /* AppDelegate.m in Sources */,
@@ -545,6 +551,7 @@
 				0EBF0B091C18301D00C8CE70 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0EBF0B0A1C18301D00C8CE70 /* Build configuration list for PBXNativeTarget "MyResumeTests" */ = {
 			isa = XCConfigurationList;
@@ -553,6 +560,7 @@
 				0EBF0B0C1C18301D00C8CE70 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0EBF0B0D1C18301D00C8CE70 /* Build configuration list for PBXNativeTarget "MyResumeUITests" */ = {
 			isa = XCConfigurationList;
@@ -561,6 +569,7 @@
 				0EBF0B0F1C18301D00C8CE70 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

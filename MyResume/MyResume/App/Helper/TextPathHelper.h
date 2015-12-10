@@ -6,8 +6,10 @@
 //
 
 #import <Foundation/Foundation.h>
-@class UIBezierPath;
+@import UIKit;
+
 
 @interface TextPathHelper : NSObject
 +(UIBezierPath*)pathForText:(NSString*)text;
++(CAShapeLayer*)textLayerWithText:(NSString*)text frame:(CGRect)frame;
 @end

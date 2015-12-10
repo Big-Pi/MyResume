@@ -9,13 +9,14 @@
 #import <QuartzCore/QuartzCore.h>
 #import <CoreText/CoreText.h>
 #import <UIKit/UIBezierPath.h>
+#import <UIKit/UIColor.h>
 
 @implementation TextPathHelper
 +(UIBezierPath*)pathForText:(NSString*)text{
     
     CGMutablePathRef letters = CGPathCreateMutable();
     
-    CTFontRef font = CTFontCreateWithName(CFSTR("Helvetica-Bold"), 72.0f, NULL);
+    CTFontRef font = CTFontCreateWithName(CFSTR("Helvetica-Bold"), 100.0f, NULL);
     NSDictionary *attrs = [NSDictionary dictionaryWithObjectsAndKeys:
                            (__bridge id)font, kCTFontAttributeName,
                            nil];
@@ -55,11 +56,25 @@
     UIBezierPath *path = [UIBezierPath bezierPath];
     [path moveToPoint:CGPointZero];
     [path appendPath:[UIBezierPath bezierPathWithCGPath:letters]];
-    
+
     CGPathRelease(letters);
     CFRelease(font);
     return path;
 }
 
-
++(CAShapeLayer*)textLayerWithText:(NSString*)text frame:(CGRect)frame{
+    UIBezierPath *path= [TextPathHelper pathForText:text];
+    //text path layer
+    CAShapeLayer *pathLayer = [CAShapeLayer layer];
+    pathLayer.frame = frame;
+    pathLayer.bounds = CGPathGetBoundingBox(path.CGPath);
+//    pathLayer.backgroundColor = [[UIColor yellowColor] CGColor];
+    pathLayer.geometryFlipped = YES;
+    pathLayer.path = path.CGPath;
+    pathLayer.strokeColor = [[UIColor blackColor] CGColor];
+    pathLayer.fillColor = [UIColor clearColor].CGColor;
+    pathLayer.lineWidth = 7.0f;
+    pathLayer.lineJoin = kCALineJoinRound;
+    return pathLayer;
+}
 @end
