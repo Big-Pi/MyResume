@@ -111,7 +111,7 @@
 
 -(void)animationDidStop:(CAAnimation *)anim finished:(BOOL)flag{
     self.penLayer.hidden=YES;
-    [self performSegueWithIdentifier:@"show" sender:self];
+    [self performSegueWithIdentifier:@"showCollectionCards" sender:self];
 }
 
 @end
