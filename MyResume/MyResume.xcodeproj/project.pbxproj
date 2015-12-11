@@ -28,6 +28,7 @@
 		0E6D7E371C1B294800A5F43D /* sie.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0E6D7E301C1B294800A5F43D /* sie.jpg */; };
 		0E6D7E381C1B294800A5F43D /* sie_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 0E6D7E311C1B294800A5F43D /* sie_logo.png */; };
 		0E6D7E3B1C1B297700A5F43D /* TimeLineHeaderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E6D7E3A1C1B297700A5F43D /* TimeLineHeaderCell.m */; };
+		0E6D7E3F1C1B2D6600A5F43D /* TimeLine.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0E6D7E3E1C1B2D6600A5F43D /* TimeLine.storyboard */; };
 		0EBF0AE81C18301C00C8CE70 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0EBF0AE61C18301C00C8CE70 /* Main.storyboard */; };
 		0EBF0AEA1C18301C00C8CE70 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0EBF0AE91C18301C00C8CE70 /* Assets.xcassets */; };
 		0EBF0AED1C18301C00C8CE70 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0EBF0AEB1C18301C00C8CE70 /* LaunchScreen.storyboard */; };
@@ -92,6 +93,7 @@
 		0E6D7E311C1B294800A5F43D /* sie_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sie_logo.png; sourceTree = "<group>"; };
 		0E6D7E391C1B297700A5F43D /* TimeLineHeaderCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimeLineHeaderCell.h; sourceTree = "<group>"; };
 		0E6D7E3A1C1B297700A5F43D /* TimeLineHeaderCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimeLineHeaderCell.m; sourceTree = "<group>"; };
+		0E6D7E3E1C1B2D6600A5F43D /* TimeLine.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = TimeLine.storyboard; sourceTree = "<group>"; };
 		0EBF0ADA1C18301C00C8CE70 /* MyResume.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyResume.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0EBF0AE71C18301C00C8CE70 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0EBF0AE91C18301C00C8CE70 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -177,6 +179,7 @@
 				0E6D7E3A1C1B297700A5F43D /* TimeLineHeaderCell.m */,
 				0E6D7E201C1B285100A5F43D /* TimeLineViewController.h */,
 				0E6D7E211C1B285100A5F43D /* TimeLineViewController.m */,
+				0E6D7E3E1C1B2D6600A5F43D /* TimeLine.storyboard */,
 			);
 			path = TimeLine;
 			sourceTree = "<group>";
@@ -422,6 +425,7 @@
 				0E6D7E361C1B294800A5F43D /* scholarship.jpg in Resources */,
 				0E6D7E341C1B294800A5F43D /* computer2.jpg in Resources */,
 				0E6D7E371C1B294800A5F43D /* sie.jpg in Resources */,
+				0E6D7E3F1C1B2D6600A5F43D /* TimeLine.storyboard in Resources */,
 				0E136B6B1C19EC660070C958 /* ColorCollectionCell.xib in Resources */,
 				0EBF0AE81C18301C00C8CE70 /* Main.storyboard in Resources */,
 			);

@@ -40,6 +40,8 @@
 
 -(void)viewDidAppear:(BOOL)animated{
     [super viewDidAppear:animated];
+//TODO [self performSegueWithIdentifier:@"test" sender:nil];
+    [self performSegueWithIdentifier:@"test" sender:nil];
 }
 
 #pragma mark - Getter Setter
