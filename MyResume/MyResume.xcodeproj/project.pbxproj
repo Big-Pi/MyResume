@@ -29,6 +29,15 @@
 		0E6D7E381C1B294800A5F43D /* sie_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 0E6D7E311C1B294800A5F43D /* sie_logo.png */; };
 		0E6D7E3B1C1B297700A5F43D /* TimeLineHeaderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E6D7E3A1C1B297700A5F43D /* TimeLineHeaderCell.m */; };
 		0E6D7E3F1C1B2D6600A5F43D /* TimeLine.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0E6D7E3E1C1B2D6600A5F43D /* TimeLine.storyboard */; };
+		0E6D7E511C1B2EA100A5F43D /* MagicAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E6D7E421C1B2EA100A5F43D /* MagicAnimator.m */; };
+		0E6D7E521C1B2EA100A5F43D /* ProgressLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E6D7E441C1B2EA100A5F43D /* ProgressLabel.m */; };
+		0E6D7E531C1B2EA100A5F43D /* Skill.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E6D7E461C1B2EA100A5F43D /* Skill.m */; };
+		0E6D7E541C1B2EA100A5F43D /* SkillProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E6D7E481C1B2EA100A5F43D /* SkillProgressView.m */; };
+		0E6D7E551C1B2EA100A5F43D /* SkillProgressViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E6D7E4A1C1B2EA100A5F43D /* SkillProgressViewController.m */; };
+		0E6D7E561C1B2EA100A5F43D /* SkillReveal.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0E6D7E4B1C1B2EA100A5F43D /* SkillReveal.storyboard */; };
+		0E6D7E571C1B2EA100A5F43D /* skills.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0E6D7E4C1C1B2EA100A5F43D /* skills.plist */; };
+		0E6D7E581C1B2EA100A5F43D /* SkillsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E6D7E4E1C1B2EA100A5F43D /* SkillsViewController.m */; };
+		0E6D7E591C1B2EA100A5F43D /* SkillView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E6D7E501C1B2EA100A5F43D /* SkillView.m */; };
 		0EBF0AE81C18301C00C8CE70 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0EBF0AE61C18301C00C8CE70 /* Main.storyboard */; };
 		0EBF0AEA1C18301C00C8CE70 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0EBF0AE91C18301C00C8CE70 /* Assets.xcassets */; };
 		0EBF0AED1C18301C00C8CE70 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0EBF0AEB1C18301C00C8CE70 /* LaunchScreen.storyboard */; };
@@ -94,6 +103,22 @@
 		0E6D7E391C1B297700A5F43D /* TimeLineHeaderCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimeLineHeaderCell.h; sourceTree = "<group>"; };
 		0E6D7E3A1C1B297700A5F43D /* TimeLineHeaderCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimeLineHeaderCell.m; sourceTree = "<group>"; };
 		0E6D7E3E1C1B2D6600A5F43D /* TimeLine.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = TimeLine.storyboard; sourceTree = "<group>"; };
+		0E6D7E411C1B2EA100A5F43D /* MagicAnimator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MagicAnimator.h; sourceTree = "<group>"; };
+		0E6D7E421C1B2EA100A5F43D /* MagicAnimator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MagicAnimator.m; sourceTree = "<group>"; };
+		0E6D7E431C1B2EA100A5F43D /* ProgressLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProgressLabel.h; sourceTree = "<group>"; };
+		0E6D7E441C1B2EA100A5F43D /* ProgressLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProgressLabel.m; sourceTree = "<group>"; };
+		0E6D7E451C1B2EA100A5F43D /* Skill.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Skill.h; sourceTree = "<group>"; };
+		0E6D7E461C1B2EA100A5F43D /* Skill.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Skill.m; sourceTree = "<group>"; };
+		0E6D7E471C1B2EA100A5F43D /* SkillProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SkillProgressView.h; sourceTree = "<group>"; };
+		0E6D7E481C1B2EA100A5F43D /* SkillProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SkillProgressView.m; sourceTree = "<group>"; };
+		0E6D7E491C1B2EA100A5F43D /* SkillProgressViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SkillProgressViewController.h; sourceTree = "<group>"; };
+		0E6D7E4A1C1B2EA100A5F43D /* SkillProgressViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SkillProgressViewController.m; sourceTree = "<group>"; };
+		0E6D7E4B1C1B2EA100A5F43D /* SkillReveal.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SkillReveal.storyboard; sourceTree = "<group>"; };
+		0E6D7E4C1C1B2EA100A5F43D /* skills.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = skills.plist; sourceTree = "<group>"; };
+		0E6D7E4D1C1B2EA100A5F43D /* SkillsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SkillsViewController.h; sourceTree = "<group>"; };
+		0E6D7E4E1C1B2EA100A5F43D /* SkillsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SkillsViewController.m; sourceTree = "<group>"; };
+		0E6D7E4F1C1B2EA100A5F43D /* SkillView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SkillView.h; sourceTree = "<group>"; };
+		0E6D7E501C1B2EA100A5F43D /* SkillView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SkillView.m; sourceTree = "<group>"; };
 		0EBF0ADA1C18301C00C8CE70 /* MyResume.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyResume.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0EBF0AE71C18301C00C8CE70 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0EBF0AE91C18301C00C8CE70 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -206,6 +231,29 @@
 			path = Prize;
 			sourceTree = "<group>";
 		};
+		0E6D7E401C1B2EA100A5F43D /* SkillReveal */ = {
+			isa = PBXGroup;
+			children = (
+				0E6D7E411C1B2EA100A5F43D /* MagicAnimator.h */,
+				0E6D7E421C1B2EA100A5F43D /* MagicAnimator.m */,
+				0E6D7E431C1B2EA100A5F43D /* ProgressLabel.h */,
+				0E6D7E441C1B2EA100A5F43D /* ProgressLabel.m */,
+				0E6D7E451C1B2EA100A5F43D /* Skill.h */,
+				0E6D7E461C1B2EA100A5F43D /* Skill.m */,
+				0E6D7E471C1B2EA100A5F43D /* SkillProgressView.h */,
+				0E6D7E481C1B2EA100A5F43D /* SkillProgressView.m */,
+				0E6D7E491C1B2EA100A5F43D /* SkillProgressViewController.h */,
+				0E6D7E4A1C1B2EA100A5F43D /* SkillProgressViewController.m */,
+				0E6D7E4B1C1B2EA100A5F43D /* SkillReveal.storyboard */,
+				0E6D7E4C1C1B2EA100A5F43D /* skills.plist */,
+				0E6D7E4D1C1B2EA100A5F43D /* SkillsViewController.h */,
+				0E6D7E4E1C1B2EA100A5F43D /* SkillsViewController.m */,
+				0E6D7E4F1C1B2EA100A5F43D /* SkillView.h */,
+				0E6D7E501C1B2EA100A5F43D /* SkillView.m */,
+			);
+			path = SkillReveal;
+			sourceTree = "<group>";
+		};
 		0EBF0AD11C18301C00C8CE70 = {
 			isa = PBXGroup;
 			children = (
@@ -268,6 +316,7 @@
 		0EBF0B151C1830D500C8CE70 /* App */ = {
 			isa = PBXGroup;
 			children = (
+				0E6D7E401C1B2EA100A5F43D /* SkillReveal */,
 				0E6D7E141C1B285100A5F43D /* TimeLine */,
 				0E136B5B1C19EC660070C958 /* CollectionCard */,
 				0EBF0B161C1830D500C8CE70 /* Helper */,
@@ -425,9 +474,11 @@
 				0E6D7E361C1B294800A5F43D /* scholarship.jpg in Resources */,
 				0E6D7E341C1B294800A5F43D /* computer2.jpg in Resources */,
 				0E6D7E371C1B294800A5F43D /* sie.jpg in Resources */,
+				0E6D7E571C1B2EA100A5F43D /* skills.plist in Resources */,
 				0E6D7E3F1C1B2D6600A5F43D /* TimeLine.storyboard in Resources */,
 				0E136B6B1C19EC660070C958 /* ColorCollectionCell.xib in Resources */,
 				0EBF0AE81C18301C00C8CE70 /* Main.storyboard in Resources */,
+				0E6D7E561C1B2EA100A5F43D /* SkillReveal.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -455,19 +506,26 @@
 				0EBF0B291C18813900C8CE70 /* MagicTransitionSegue.m in Sources */,
 				0EBF0B231C1830D500C8CE70 /* UIImage+ImageEffects.m in Sources */,
 				0E136B6D1C19EC660070C958 /* SwipableCardCollectionLayout.m in Sources */,
+				0E6D7E521C1B2EA100A5F43D /* ProgressLabel.m in Sources */,
+				0E6D7E511C1B2EA100A5F43D /* MagicAnimator.m in Sources */,
 				0E6D7E221C1B285100A5F43D /* AutoShowScrollToTopImg.m in Sources */,
 				0E136B691C19EC660070C958 /* CollectionCardViewController.m in Sources */,
 				0E6D7E241C1B285100A5F43D /* Experience.m in Sources */,
 				0E6D7E281C1B285100A5F43D /* TimeLineViewController.m in Sources */,
+				0E6D7E531C1B2EA100A5F43D /* Skill.m in Sources */,
+				0E6D7E581C1B2EA100A5F43D /* SkillsViewController.m in Sources */,
 				0E6D7E231C1B285100A5F43D /* DateFormatter.m in Sources */,
 				0E136B6A1C19EC660070C958 /* ColorCollectionCell.m in Sources */,
 				0E6D7E3B1C1B297700A5F43D /* TimeLineHeaderCell.m in Sources */,
 				0EBF0B221C1830D500C8CE70 /* TextPathHelper.m in Sources */,
 				0E136B6E1C19EC660070C958 /* UIColor+PiRandomColor.m in Sources */,
+				0E6D7E541C1B2EA100A5F43D /* SkillProgressView.m in Sources */,
 				0E6D7E261C1B285100A5F43D /* TimeLineDotLineView.m in Sources */,
 				0EBF0B251C1830D500C8CE70 /* AppDelegate.m in Sources */,
+				0E6D7E591C1B2EA100A5F43D /* SkillView.m in Sources */,
 				0E6D7E271C1B285100A5F43D /* TimeLineTableViewCell.m in Sources */,
 				0EBF0B241C1830D500C8CE70 /* HandWrittingViewController.m in Sources */,
+				0E6D7E551C1B2EA100A5F43D /* SkillProgressViewController.m in Sources */,
 				0E136B6C1C19EC660070C958 /* Colours.m in Sources */,
 				0EBF0B261C1830D500C8CE70 /* main.m in Sources */,
 			);

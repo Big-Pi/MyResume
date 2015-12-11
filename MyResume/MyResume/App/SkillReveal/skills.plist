@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>name</key>
+		<string>JavaScript</string>
+		<key>progress</key>
+		<string>26</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Android</string>
+		<key>progress</key>
+		<string>55</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Swift</string>
+		<key>progress</key>
+		<string>33</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Git</string>
+		<key>progress</key>
+		<string>20</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Html&amp;Css</string>
+		<key>progress</key>
+		<string>26</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>iOS</string>
+		<key>progress</key>
+		<string>76</string>
+	</dict>
+</array>
+</plist>
