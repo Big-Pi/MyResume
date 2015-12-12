@@ -12,6 +12,7 @@
 #import "SkillView.h"
 #import "SkillProgressView.h"
 #import "ProgressLabel.h"
+#import "MainViewController.h"
 
 @interface MagicAnimator ()
 @property (strong,nonatomic) NSMutableArray *animCompleteLabels;
@@ -33,8 +34,15 @@
 
 -(void)animateTransition:(id<UIViewControllerContextTransitioning>)transitionContext{
     [self.animCompleteLabels removeAllObjects];
-    //
-    SkillsViewController *fromVC= [transitionContext viewControllerForKey:UITransitionContextFromViewControllerKey];
+    //!!为什么fromVC是MainViewcontroller！
+    //而不是 SkillsViewController
+    MainViewController *mainVC= [transitionContext viewControllerForKey:UITransitionContextFromViewControllerKey];
+    SkillsViewController *fromVC;
+    for(UIViewController *vc in mainVC.viewControllers){
+        if([vc isMemberOfClass:[SkillsViewController class]]){
+            fromVC=(SkillsViewController*)vc;
+        }
+    }
     SkillProgressViewController *toVC= [transitionContext viewControllerForKey:UITransitionContextToViewControllerKey];
     UIView *containerView= [transitionContext containerView];
     //

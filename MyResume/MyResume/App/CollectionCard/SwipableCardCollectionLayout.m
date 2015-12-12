@@ -33,22 +33,6 @@
 -(void)prepareLayout{
     [super prepareLayout];
     self.collectionView.contentOffset=CGPointZero;
-    
-    CGRect visibleRect = CGRectInset((CGRect){.origin = self.collectionView.bounds.origin, .size = self.collectionView.frame.size}, -100, -100);
-    
-    NSArray *itemsInVisibleRectArray = [super layoutAttributesForElementsInRect:visibleRect];
-    /**
-     *  @author BigPi, 15-11-20 01:11:13
-     *
-     *  UISnapBehavior *snap=[[UISnapBehavior alloc]initWithItem:self snapToPoint:p];
-     snap.damping=0.1;
-     
-     [self.animator addBehavior:snap];
-     *
-     *  @param CGSize
-     *
-     *  @return 
-     */
 }
 
 -(CGSize)collectionViewContentSize{

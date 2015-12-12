@@ -13,4 +13,5 @@
 @property (strong,nonatomic) NSArray *allSkills;
 @property (strong, nonatomic) IBOutletCollection(UILabel) NSArray *skillLabels;
 @property (copy,nonatomic) void(^animComplete)();
+-(void)startAnim;
 @end

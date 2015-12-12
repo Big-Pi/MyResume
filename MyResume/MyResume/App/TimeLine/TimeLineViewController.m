@@ -13,6 +13,7 @@
 #import "AutoShowScrollToTopImg.h"
 #import "Experience.h"
 #import "DateFormatter.h"
+#import "TabBarItemImageHelper.h"
 
 @interface TimeLineViewController ()<UITableViewDelegate,UITableViewDataSource>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
@@ -24,6 +25,15 @@
 
 #pragma mark - ViewController Life Cycle
 
+- (instancetype)initWithCoder:(NSCoder *)coder
+{
+    self = [super initWithCoder:coder];
+    if (self) {
+        self.tabBarItem.title=@"经验";
+        self.tabBarItem.image=[TabBarItemImageHelper timeLineTabbarItemImage];
+    }
+    return self;
+}
 -(void)viewDidLoad{
     [super viewDidLoad];
     self.tableView.sectionHeaderHeight=66;
@@ -34,14 +44,8 @@
     self.tableView.layer.masksToBounds=NO;
 }
 
--(BOOL)prefersStatusBarHidden{
-    return YES;
-}
-
 -(void)viewDidAppear:(BOOL)animated{
     [super viewDidAppear:animated];
-//TODO [self performSegueWithIdentifier:@"test" sender:nil];
-    [self performSegueWithIdentifier:@"test" sender:nil];
 }
 
 #pragma mark - Getter Setter

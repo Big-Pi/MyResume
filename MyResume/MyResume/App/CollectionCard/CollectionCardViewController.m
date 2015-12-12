@@ -10,6 +10,7 @@
 #import "ColorCollectionCell.h"
 #import "SwipableCardCollectionLayout.h"
 #import "UIColor+PiRandomColor.h"
+#import "TabBarItemImageHelper.h"
 
 @interface CollectionCardViewController ()<UICollectionViewDataSource,ColorCollectionCellDelegate, SwipableCardCollectionLayoutDelegate>
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
@@ -20,6 +21,14 @@
 
 @implementation CollectionCardViewController
 
+- (instancetype)initWithCoder:(NSCoder *)coder
+{
+    self = [super initWithCoder:coder];
+    if (self) {
+        self.tabBarItem.image=[TabBarItemImageHelper collectionCardsTabbarItemImage];
+    }
+    return self;
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self.collectionView  registerNib:[UINib nibWithNibName:@"ColorCollectionCell" bundle:nil] forCellWithReuseIdentifier:@"ColorCell"];

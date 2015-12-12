@@ -10,6 +10,7 @@
 #import "SkillView.h"
 #import "SkillProgressViewController.h"
 #import "MagicAnimator.h"
+#import "TabBarItemImageHelper.h"
 
 @interface SkillsViewController ()<UIViewControllerTransitioningDelegate>
 @property (strong,nonatomic) MagicAnimator *animator;
@@ -17,6 +18,15 @@
 
 @implementation SkillsViewController
 
+- (instancetype)initWithCoder:(NSCoder *)coder
+{
+    self = [super initWithCoder:coder];
+    if (self) {
+        self.tabBarItem.title=@"技能";
+        self.tabBarItem.image=[TabBarItemImageHelper skillTabbarItemImage];
+    }
+    return self;
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.skillView.animComplete=^(){
@@ -30,9 +40,11 @@
     NSLog(@"%@",NSStringFromCGRect(self.view.bounds));
 }
 
--(BOOL)prefersStatusBarHidden{
-    return YES;
+-(void)viewDidAppear:(BOOL)animated{
+    [super viewDidAppear:animated];
+    [self.skillView startAnim];
 }
+
 -(MagicAnimator *)animator{
     if(!_animator){
         _animator=[[MagicAnimator alloc]init];

@@ -20,8 +20,4 @@
     self.skillProgrssView.skills=self.skills;
 }
 
--(BOOL)prefersStatusBarHidden{
-    return YES;
-}
-
 @end

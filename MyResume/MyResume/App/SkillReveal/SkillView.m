@@ -51,8 +51,27 @@
         label.layer.shadowOffset=CGSizeMake(8, 8);
         label.layer.shadowOpacity=1.0;
         label.layer.masksToBounds=NO;
-        label.clipsToBounds=NO;
-        //
+    }
+    
+}
+
+-(void)awakeFromNib{
+    for (int i=0; i<self.skillLabels.count; i++) {
+        UILabel *label=self.skillLabels[i];
+        Skill *skill=self.allSkills[i];
+        label.text=skill.name;
+        label.layer.shadowColor=[UIColor blackColor].CGColor;
+        label.layer.shadowRadius=6;
+        label.layer.shadowOffset=CGSizeMake(8, 8);
+        label.layer.shadowOpacity=1.0;
+        label.layer.masksToBounds=NO;
+    }
+}
+
+#pragma mark - Public
+-(void)startAnim{
+    for (int i=0; i<self.skillLabels.count; i++) {
+        UILabel *label=self.skillLabels[i];
         [UIView animateWithDuration:4.0 animations:^{
             NSInteger offsetX= [self randomOffset];
             NSInteger offsetY= [self randomOffset];
@@ -63,12 +82,12 @@
             label.transform=concat;
         } completion:^(BOOL finished) {
             [self.animCompleteLabels addObject:label];
+            NSLog(@"%lu - %lu",(unsigned long)self.animCompleteLabels.count,(unsigned long)self.skillLabels.count);
             if(self.animCompleteLabels.count==self.skillLabels.count){
                 self.animComplete();
             }
         }];
     }
-    
 }
 
 #pragma mark - Getter Setter
@@ -88,7 +107,7 @@
 
 -(void)layoutSubviews{
     [super layoutSubviews];
-    [self initPrivate];
+//    [self initPrivate];
 }
 
 #pragma mark - Private
