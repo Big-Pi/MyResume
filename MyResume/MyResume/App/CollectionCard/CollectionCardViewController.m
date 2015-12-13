@@ -110,7 +110,7 @@
 }
 
 -(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
-    NSLog(@"selected : %ld",indexPath.item);
+//    NSLog(@"selected : %d",indexPath.item);
 }
 
 -(CGVector)deleteCellVector{

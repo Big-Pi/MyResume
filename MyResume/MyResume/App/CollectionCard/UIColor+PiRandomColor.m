@@ -7,22 +7,13 @@
 //
 
 #import "UIColor+PiRandomColor.h"
-#import "Colours.h"
+#import "Chameleon.h"
 
 static UIColor *lastColor;
 
 @implementation UIColor (PiRandomColor)
-+(void)initialize{
-    lastColor=[UIColor randomColor];
-}
 
 +(UIColor *)randomColor{
-    
-    NSArray *array=@[[UIColor pinkLipstickColor], [UIColor infoBlueColor],[UIColor successColor],[UIColor grapeColor],[UIColor skyBlueColor],[UIColor pastelPurpleColor],[UIColor pastelOrangeColor]];
-    UIColor *randomColor=array[arc4random()%(array.count-1)];
-    //保证最新的和前一个color不同
-    randomColor = [randomColor isEqual:lastColor] ? [UIColor randomColor] :randomColor;
-    lastColor=randomColor;
-    return randomColor;
+    return [UIColor randomFlatColor];
 }
 @end

@@ -100,7 +100,7 @@
         attr.alpha=0.4;
         attr.transform=cell.transform;
         CGVector vector= [self.delegate deleteCellVector];
-        NSLog(@"%@",NSStringFromCGVector(vector));
+//        NSLog(@"%@",NSStringFromCGVector(vector));
         attr.frame=CGRectApplyAffineTransform(cell.frame, CGAffineTransformMakeTranslation(vector.dx, vector.dy));
         return attr;
     }
@@ -119,7 +119,7 @@
             if(indexPath2Delete.item==NSIntegerMax){
                 indexPath2Delete=[NSIndexPath indexPathForItem:0 inSection:indexPath2Delete.section];
             }
-            NSLog(@"%ld",item.indexPathBeforeUpdate.item);
+//            NSLog(@"%ld",item.indexPathBeforeUpdate.item);
             [self.itemToDelete addObject:indexPath2Delete];
         }else if(item.updateAction==UICollectionUpdateActionInsert){
             [self.itemToAdd addObject:item.indexPathAfterUpdate];
