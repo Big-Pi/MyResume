@@ -12,7 +12,7 @@
 #import "MagicAnimator.h"
 #import "TabBarItemImageHelper.h"
 
-@interface SkillsViewController ()<UIViewControllerTransitioningDelegate>
+@interface SkillsViewController ()<UINavigationControllerDelegate>
 @property (strong,nonatomic) MagicAnimator *animator;
 @end
 
@@ -27,17 +27,13 @@
     }
     return self;
 }
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.skillView.animComplete=^(){
-        UIStoryboard *sb=[UIStoryboard storyboardWithName:@"SkillReveal" bundle:nil];
-        SkillProgressViewController *spvc= [sb instantiateViewControllerWithIdentifier:@"SkillProgressViewController"];
-        spvc.animLabels=self.skillView.skillLabels;
-        spvc.skills=self.skillView.allSkills;
-        spvc.transitioningDelegate=self;
-        [self presentViewController:spvc animated:YES completion:nil];
+        self.navigationController.delegate=self;
+        [self performSegueWithIdentifier:@"showSkillList" sender:self];
     };
-    NSLog(@"%@",NSStringFromCGRect(self.view.bounds));
 }
 
 -(void)viewDidAppear:(BOOL)animated{
@@ -52,7 +48,15 @@
     return _animator;
 }
 
--(id<UIViewControllerAnimatedTransitioning>)animationControllerForPresentedController:(UIViewController *)presented presentingController:(UIViewController *)presenting sourceController:(UIViewController *)source{
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    if([segue.identifier isEqualToString: @"showSkillList"]){
+        SkillProgressViewController *skillProgressVC= segue.destinationViewController;
+        skillProgressVC.skills=self.skillView.allSkills;
+    }
+}
+#pragma mark - UINavigationControllerDelegate
+-(id<UIViewControllerAnimatedTransitioning>)navigationController:(UINavigationController *)navigationController animationControllerForOperation:(UINavigationControllerOperation)operation fromViewController:(UIViewController *)fromVC toViewController:(UIViewController *)toVC{
+    self.animator.operation=operation;
     return self.animator;
 }
 @end

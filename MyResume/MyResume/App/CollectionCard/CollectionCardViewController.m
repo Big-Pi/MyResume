@@ -25,6 +25,7 @@
 {
     self = [super initWithCoder:coder];
     if (self) {
+        self.tabBarItem.title=@"奖项";
         self.tabBarItem.image=[TabBarItemImageHelper collectionCardsTabbarItemImage];
     }
     return self;
@@ -50,14 +51,14 @@
     
     if(self.collectionView.numberOfSections==0){
         for(NSInteger i=0;i<insertCount;i++){
-            [self.array addObject:[NSString stringWithFormat:@"%ld",i]];
+            [self.array addObject:[NSString stringWithFormat:@"%ld",(long)i]];
         }
         [self.collectionView insertSections:[NSIndexSet indexSetWithIndex:0]];
     }else{
         
         [self.collectionView performBatchUpdates:^{
             for(NSInteger i=insertStartIndex ;i<insertStartIndex+insertStartIndex;i++){
-                [self.array addObject:[NSString stringWithFormat:@"%ld",i]];
+                [self.array addObject:[NSString stringWithFormat:@"%ld",(long)i]];
                 [self.collectionView insertItemsAtIndexPaths:@[[NSIndexPath indexPathForItem:i inSection:0]]];
             }
         } completion:^(BOOL finished) {
@@ -74,8 +75,6 @@
 
 #pragma mark - UICollectionViewDataSource
 -(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
-//    PiCollectionViewCell *cell= [collectionView dequeueReusableCellWithReuseIdentifier:@"Cell" forIndexPath:indexPath];
-//    [cell.label setTitle:self.array[indexPath.item] forState:UIControlStateNormal];
     ColorCollectionCell *cell=[collectionView dequeueReusableCellWithReuseIdentifier:@"ColorCell" forIndexPath:indexPath];
     cell.colorView.backgroundColor=[UIColor randomColor];
     cell.delegate=self;
@@ -90,19 +89,6 @@
     return self.array.count==0 ? 0 :1;
 }
 
-//-(UICollectionReusableView *)collectionView:(UICollectionView *)collectionView viewForSupplementaryElementOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)indexPath{
-//    PiCollectionHeaderView *header= [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"Supplementary" forIndexPath:indexPath];
-//    return header;
-//}
-
-#pragma mark - UICollectionViewDelegateFlowLayout
-//-(CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath{
-//    
-//}
-//-(CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout referenceSizeForHeaderInSection:(NSInteger)section{
-//    
-//}
-
 #pragma mark - SwipableCardCollectionLayoutDelegate
 
 -(CGSize)collectionViewContentSize:(UICollectionView *)collectionView{
@@ -110,7 +96,7 @@
 }
 
 -(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
-//    NSLog(@"selected : %d",indexPath.item);
+    NSLog(@"selected : %d",indexPath.item);
 }
 
 -(CGVector)deleteCellVector{
@@ -143,6 +129,7 @@
         
     }];
 }
+
 -(void)ColorCollectionCell:(ColorCollectionCell *)cell beginPan:(CGPoint)currentPoint{
     
 }

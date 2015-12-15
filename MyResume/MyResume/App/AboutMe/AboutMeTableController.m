@@ -19,6 +19,7 @@
 {
     self = [super initWithCoder:coder];
     if (self) {
+        self.tabBarItem.title=@"个人";
         self.tabBarItem.image=[TabBarItemImageHelper aboutMeTabbarItemImage];
     }
     return self;

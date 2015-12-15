@@ -72,7 +72,7 @@
 -(void)startAnim{
     for (int i=0; i<self.skillLabels.count; i++) {
         UILabel *label=self.skillLabels[i];
-        [UIView animateWithDuration:4.0 animations:^{
+        [UIView animateWithDuration:3.0 animations:^{
             NSInteger offsetX= [self randomOffset];
             NSInteger offsetY= [self randomOffset];
             CGFloat scale=[self randomScale];
@@ -82,7 +82,7 @@
             label.transform=concat;
         } completion:^(BOOL finished) {
             [self.animCompleteLabels addObject:label];
-            NSLog(@"%lu - %lu",(unsigned long)self.animCompleteLabels.count,(unsigned long)self.skillLabels.count);
+//            NSLog(@"%lu - %lu",(unsigned long)self.animCompleteLabels.count,(unsigned long)self.skillLabels.count);
             if(self.animCompleteLabels.count==self.skillLabels.count){
                 self.animComplete();
             }

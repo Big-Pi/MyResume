@@ -10,5 +10,5 @@
 @import UIKit;
 
 @interface MagicAnimator : NSObject<UIViewControllerAnimatedTransitioning>
-
+@property (assign,nonatomic) UINavigationControllerOperation operation;
 @end

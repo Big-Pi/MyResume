@@ -11,6 +11,5 @@
 
 @interface SkillProgressViewController : UIViewController
 @property (weak, nonatomic) IBOutlet SkillProgressView *skillProgrssView;
-@property (strong,nonatomic) NSArray *animLabels;
 @property (strong,nonatomic) NSArray *skills;
 @end
