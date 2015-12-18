@@ -10,50 +10,10 @@
 #import "Skill.h"
 
 @interface SkillView ()
-@property (weak, nonatomic) NSMutableArray *animCompleteLabels;
+@property (strong, nonatomic) NSMutableArray *animCompleteLabels;
 @end
 
 @implementation SkillView
-
--(void)initPrivate{
-//    for(int i=0;i<6;i++){
-//        UILabel *lable=[[UILabel alloc]init];
-//        lable.text=[NSString stringWithFormat:@"%d",i];
-//        lable.font=[UIFont boldSystemFontOfSize:[self randomFontSize]];
-//        [lable sizeToFit];
-//        CGPoint origin= [self randomOrigin];
-//        lable.frame=CGRectMake(origin.x, origin.y, lable.frame.size.width, lable.frame.size.height);
-//        lable.layer.shadowColor=[UIColor blackColor].CGColor;
-//        lable.layer.shadowRadius=5;
-//        lable.layer.shadowOffset=CGSizeMake(5, 5);
-//        lable.layer.shadowOpacity=0.4;
-//        [self addSubview: lable];
-//        [UIView animateWithDuration:8.0 animations:^{
-//            NSInteger offsetX= [self randomOffset];
-//            NSInteger offsetY= [self randomOffset];
-//            CGFloat scale=[self randomScale];
-//            CGAffineTransform scaleTransform= CGAffineTransformMakeScale(scale, scale);
-//            CGAffineTransform translateTransform=CGAffineTransformMakeTranslation(offsetX, offsetY);
-//            CGAffineTransform concat = CGAffineTransformConcat(scaleTransform, translateTransform);
-//            lable.transform=concat;
-//        } completion:^(BOOL finished) {
-//            
-//        }];
-//    }
-    [self.animCompleteLabels removeAllObjects];
-    
-    for (int i=0; i<self.skillLabels.count; i++) {
-        UILabel *label=self.skillLabels[i];
-        Skill *skill=self.allSkills[i];
-        label.text=skill.name;
-        label.layer.shadowColor=[UIColor blackColor].CGColor;
-        label.layer.shadowRadius=6;
-        label.layer.shadowOffset=CGSizeMake(8, 8);
-        label.layer.shadowOpacity=1.0;
-        label.layer.masksToBounds=NO;
-    }
-    
-}
 
 -(void)awakeFromNib{
     for (int i=0; i<self.skillLabels.count; i++) {
@@ -70,6 +30,7 @@
 
 #pragma mark - Public
 -(void)startAnim{
+    [self.animCompleteLabels removeAllObjects];
     for (int i=0; i<self.skillLabels.count; i++) {
         UILabel *label=self.skillLabels[i];
         [UIView animateWithDuration:3.0 animations:^{
@@ -103,11 +64,6 @@
         _allSkills=[Skill allSkills];
     }
     return _allSkills;
-}
-
--(void)layoutSubviews{
-    [super layoutSubviews];
-//    [self initPrivate];
 }
 
 #pragma mark - Private
@@ -148,11 +104,4 @@
     return  raw/100.0+1;
 }
 
-//-(CGFloat)randomRotation{
-//    
-//}
-//
-//-(UIColor*)randomColor{
-//    
-//}
 @end

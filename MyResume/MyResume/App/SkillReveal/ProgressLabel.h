@@ -11,8 +11,10 @@
 
 @interface ProgressLabel : UIView
 @property (weak, nonatomic) IBOutlet UILabel *nameLabel;
+@property (weak, nonatomic) IBOutlet UILabel *percentLabel;
 @property (strong,nonatomic) Skill *skill;
 @property (weak, nonatomic) NSLayoutConstraint *equalWidthConstraint;
 @property (weak, nonatomic) IBOutlet UIView *progressView;
+
 -(NSComparisonResult)sortHackByTag:(id)another;
 @end

@@ -25,6 +25,7 @@
     self = [super initWithCoder:coder];
     if (self) {
         [self privateInit];
+        self.contentMode=UIViewContentModeScaleAspectFit;
     }
     return self;
 }
@@ -35,7 +36,6 @@
 }
 
 -(void)privateInit{
-//    self.contentMode=UIViewContentModeRedraw;
     self.paddingLeftRightTop=self.bounds.size.width/10.0;
 }
 
@@ -62,7 +62,6 @@
     return _linePath;
 }
 
-
 - (void)drawRect:(CGRect)rect {
     [self.dotColor setFill]; //TODO animate dot colors
     [self.dotPath fill];
@@ -73,28 +72,6 @@
     [self.linePath fill];
 }
 
-//-(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event{
-//    CABasicAnimation *anim=[CABasicAnimation animationWithKeyPath:@"strokeEnd"];
-//    anim.fromValue=@0.0;
-//    anim.toValue=@1.0;
-//    anim.duration=1.0;
-//    
-//    CAShapeLayer *dotLayer=[CAShapeLayer layer];
-//    dotLayer.path=self.dotPath.CGPath;
-//    dotLayer.fillColor=[UIColor clearColor].CGColor;
-//    dotLayer.strokeColor=[UIColor redColor].CGColor;
-//    [self.layer addSublayer:dotLayer];
-//    
-//    CAShapeLayer *lineLayer=[CAShapeLayer layer];
-//    lineLayer.path=self.linePath.CGPath;
-//    lineLayer.fillColor=[UIColor clearColor].CGColor;
-//    lineLayer.lineWidth=100;
-//    lineLayer.strokeColor=[UIColor blueColor].CGColor;
-//    [self.layer addSublayer:lineLayer];
-//    
-//    [dotLayer addAnimation:anim forKey:nil];
-//    [lineLayer addAnimation:anim forKey:nil];
-//}
 
 -(UIColor *)dotColor{
     if(!_dotColor){

@@ -24,7 +24,8 @@
     NSLayoutConstraint *equalWidthConstraint=[NSLayoutConstraint constraintWithItem:self.progressView attribute:NSLayoutAttributeWidth relatedBy:NSLayoutRelationEqual toItem:self.progressView.superview attribute:NSLayoutAttributeWidth multiplier:multiplier constant:0];
     self.equalWidthConstraint=equalWidthConstraint;
     equalWidthConstraint.active=YES;
-//    [self layoutIfNeeded];
+    //
+    self.percentLabel.text=[NSString stringWithFormat:@"%@%%",skill.progrss];
 }
 
 // i set tag for ProgressLabel on storyBoard to sort

@@ -56,6 +56,7 @@
             UILabel *fLabel=fromLabels[i];
             ProgressLabel *progressLabel=toLabels[i];
             UILabel *tLabel= progressLabel.nameLabel;
+            UILabel *percentLabel=progressLabel.percentLabel;
     
             [progressLabel bringSubviewToFront:tLabel];
 
@@ -66,6 +67,7 @@
             tLabel.center=fromP;
             progressLabel.backgroundColor=[UIColor clearColor];
             progressLabel.progressView.alpha=0.0;
+            percentLabel.alpha=0.0;
             [UIView animateWithDuration:self.duration/2 delay:0.0 options:UIViewAnimationOptionCurveEaseOut animations:^{
                 tLabel.center=toP;
             } completion:^(BOOL finished) {
@@ -76,6 +78,7 @@
                 [UIView animateWithDuration:self.duration/2 delay:0.0 options:UIViewAnimationOptionCurveEaseOut animations:^{
                     progressLabel.backgroundColor=[UIColor colorWithWhite:1.0 alpha:0.85];
                     progressLabel.progressView.alpha=1.0;
+                    percentLabel.alpha=1.0;
                     progressLabel.equalWidthConstraint.constant=0;
                     [progressLabel layoutIfNeeded];
                 } completion:^(BOOL finished) {
@@ -103,6 +106,7 @@
             UILabel *tLabel=toLabels[i];
             ProgressLabel *progressLabel=fromLabels[i];
             UILabel *fLabel= progressLabel.nameLabel;
+            UILabel *percentLabel=progressLabel.percentLabel;
             
             [progressLabel bringSubviewToFront:tLabel];
             
@@ -114,6 +118,7 @@
             //
             CGFloat progressWidth= progressLabel.progressView.bounds.size.width;
             [UIView animateWithDuration:self.duration/2 delay:0.0 options:UIViewAnimationOptionCurveEaseOut animations:^{
+                percentLabel.alpha=0.0;
                 progressLabel.progressView.alpha=0.0;
                 progressLabel.backgroundColor=[UIColor clearColor];
                 progressLabel.equalWidthConstraint.constant=-progressWidth/1.1;

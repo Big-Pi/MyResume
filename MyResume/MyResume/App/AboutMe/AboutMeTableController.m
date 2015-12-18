@@ -8,8 +8,22 @@
 
 #import "AboutMeTableController.h"
 #import "TabBarItemImageHelper.h"
+#import "TTTAttributedLabel.h"
+#import <UIKit/UIKit.h>
+#import <MessageUI/MessageUI.h>
+#import "SVProgressHUD.h"
 
-@interface AboutMeTableController ()
+NSString *const kLocationQuery=@"http://maps.apple.com/?q=%@";
+
+@interface AboutMeTableController ()<TTTAttributedLabelDelegate,MFMailComposeViewControllerDelegate>
+@property (weak, nonatomic) IBOutlet UIImageView *avantar;
+@property (weak, nonatomic) IBOutlet TTTAttributedLabel *locationLabel;
+@property (weak, nonatomic) IBOutlet TTTAttributedLabel *tinyDoLabel;
+@property (weak, nonatomic) IBOutlet TTTAttributedLabel *constGeneratorLabel;
+@property (weak, nonatomic) IBOutlet TTTAttributedLabel *resumeMarkDownLabel;
+@property (weak, nonatomic) IBOutlet TTTAttributedLabel *schoolLabel;
+@property (weak, nonatomic) IBOutlet TTTAttributedLabel *myResumeLabel;
+@property (weak, nonatomic) IBOutlet TTTAttributedLabel *zhiHuDailyLabel;
 
 @end
 
@@ -27,80 +41,68 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
+    self.avantar.layer.masksToBounds=YES;
+    self.avantar.layer.cornerRadius=self.avantar.bounds.size.width/2;
+    self.avantar.layer.borderWidth=4;
+    self.avantar.layer.borderColor=[UIColor whiteColor].CGColor;
+    //
+    NSString *location=[[NSString stringWithFormat:kLocationQuery,@"辽宁省沈阳市"]stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+    [self.locationLabel addLinkToURL:[NSURL URLWithString:location] withRange:[self.locationLabel.text rangeOfString:@"辽宁沈阳"]];
+    [self.tinyDoLabel addLinkToURL:[NSURL URLWithString:@"https://github.com/Big-Pi/TinyDo"] withRange:[self.tinyDoLabel.text rangeOfString:@"TinyDo"]];
+    [self.constGeneratorLabel addLinkToURL:[NSURL URLWithString:@"https://github.com/Big-Pi/ConstGenerator"] withRange:[self.constGeneratorLabel.text rangeOfString:@"ConstGenerator"]];
+    [self.resumeMarkDownLabel addLinkToURL:[NSURL URLWithString:@"https://github.com/Big-Pi/Resume.md"] withRange:[self.resumeMarkDownLabel.text rangeOfString:@"Markdown版"]];
+    [self.schoolLabel addLinkToURL:[NSURL URLWithString:@"http://www.sie.edu.cn"] withRange:[self.schoolLabel.text rangeOfString:@"沈阳工程学院"]];
+    [self.zhiHuDailyLabel addLinkToURL:[NSURL URLWithString:@"https://github.com/Big-Pi/ZhiHuDaily"] withRange:[self.zhiHuDailyLabel.text rangeOfString:@"ZhiHuDaily"]];
+    [self.myResumeLabel addLinkToURL:[NSURL URLWithString:@"https://Big-Pi@github.com/Big-Pi/MyResume.git"] withRange:[self.myResumeLabel.text rangeOfString:@"MyResume"]];
     
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+#pragma mark - TTTAttributedLabelDelegate
+-(void)attributedLabel:(TTTAttributedLabel *)label didSelectLinkWithURL:(NSURL *)url{
+    UIApplication *app= [UIApplication sharedApplication];
+    if([app canOpenURL:url]){
+        [app openURL:url];
+    }
 }
 
-#pragma mark - Table view data source
-
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return 0;
-}
-
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 0;
-}
-
-/*
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
+#pragma mark - Private
+- (IBAction)sendEmail:(UIBarButtonItem *)sender {
+    NSString *emailTitle = @"面试邀约~!";
+    NSString *messageBody = @":)\n您的面试邀约信息～";
+    NSArray *toRecipents = [NSArray arrayWithObject:@"wangdapishuai@163.com"];
     
-    // Configure the cell...
+    MFMailComposeViewController *mc = [[MFMailComposeViewController alloc] init];
+    mc.mailComposeDelegate = self;
+    [mc setSubject:emailTitle];
+    [mc setMessageBody:messageBody isHTML:NO];
+    [mc setToRecipients:toRecipents];
     
-    return cell;
+    [self presentViewController:mc animated:YES completion:NULL];
 }
-*/
 
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
+#pragma mark - MFMailComposeViewControllerDelegate
+- (void) mailComposeController:(MFMailComposeViewController *)controller didFinishWithResult:(MFMailComposeResult)result error:(NSError *)error
+{
+    switch (result)
+    {
+        case MFMailComposeResultCancelled:
+            NSLog(@"Mail cancelled");
+            break;
+        case MFMailComposeResultSaved:
+            NSLog(@"Mail saved");
+            break;
+        case MFMailComposeResultSent:
+            [SVProgressHUD showSuccessWithStatus:@"   发送完成   "];
+            NSLog(@"Mail sent");
+            break;
+        case MFMailComposeResultFailed:
+            NSLog(@"Mail sent failure: %@", [error localizedDescription]);
+            break;
+        default:
+            break;
+    }
+    [self dismissViewControllerAnimated:YES completion:NULL];
 }
-*/
 
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
-}
-*/
-
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath {
-}
-*/
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

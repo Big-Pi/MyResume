@@ -12,6 +12,11 @@
 		0E136B6B1C19EC660070C958 /* ColorCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0E136B611C19EC660070C958 /* ColorCollectionCell.xib */; };
 		0E136B6D1C19EC660070C958 /* SwipableCardCollectionLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E136B651C19EC660070C958 /* SwipableCardCollectionLayout.m */; };
 		0E136B6E1C19EC660070C958 /* UIColor+PiRandomColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E136B671C19EC660070C958 /* UIColor+PiRandomColor.m */; };
+		0E22780A1C245698003E3547 /* SVIndefiniteAnimatedView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E2278031C245698003E3547 /* SVIndefiniteAnimatedView.m */; };
+		0E22780B1C245698003E3547 /* SVProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 0E2278051C245698003E3547 /* SVProgressHUD.bundle */; };
+		0E22780C1C245698003E3547 /* SVProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E2278071C245698003E3547 /* SVProgressHUD.m */; };
+		0E22780D1C245698003E3547 /* SVRadialGradientLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E2278091C245698003E3547 /* SVRadialGradientLayer.m */; };
+		0E22780F1C24579D003E3547 /* prize.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0E22780E1C24579D003E3547 /* prize.plist */; };
 		0E35A5FB1C1C6A15003921A0 /* FontAwesome.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0E35A5FA1C1C6A14003921A0 /* FontAwesome.ttf */; };
 		0E35A60C1C1C71FA003921A0 /* HandWrittingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E35A6091C1C71FA003921A0 /* HandWrittingViewController.m */; };
 		0E35A60D1C1C71FA003921A0 /* MagicTransitionSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E35A60B1C1C71FA003921A0 /* MagicTransitionSegue.m */; };
@@ -43,8 +48,6 @@
 		0E6D7E341C1B294800A5F43D /* computer2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0E6D7E2D1C1B294800A5F43D /* computer2.jpg */; };
 		0E6D7E351C1B294800A5F43D /* qr_share.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0E6D7E2E1C1B294800A5F43D /* qr_share.jpg */; };
 		0E6D7E361C1B294800A5F43D /* scholarship.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0E6D7E2F1C1B294800A5F43D /* scholarship.jpg */; };
-		0E6D7E371C1B294800A5F43D /* sie.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0E6D7E301C1B294800A5F43D /* sie.jpg */; };
-		0E6D7E381C1B294800A5F43D /* sie_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 0E6D7E311C1B294800A5F43D /* sie_logo.png */; };
 		0E6D7E3B1C1B297700A5F43D /* TimeLineHeaderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E6D7E3A1C1B297700A5F43D /* TimeLineHeaderCell.m */; };
 		0E6D7E3F1C1B2D6600A5F43D /* TimeLine.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0E6D7E3E1C1B2D6600A5F43D /* TimeLine.storyboard */; };
 		0E6D7E511C1B2EA100A5F43D /* MagicAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E6D7E421C1B2EA100A5F43D /* MagicAnimator.m */; };
@@ -56,6 +59,7 @@
 		0E6D7E571C1B2EA100A5F43D /* skills.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0E6D7E4C1C1B2EA100A5F43D /* skills.plist */; };
 		0E6D7E581C1B2EA100A5F43D /* SkillsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E6D7E4E1C1B2EA100A5F43D /* SkillsViewController.m */; };
 		0E6D7E591C1B2EA100A5F43D /* SkillView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E6D7E501C1B2EA100A5F43D /* SkillView.m */; };
+		0E91F3411C2155010069E4E6 /* TTTAttributedLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E91F3401C2155010069E4E6 /* TTTAttributedLabel.m */; };
 		0EA7A31B1C1D812700829442 /* Chameleon_.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EA7A3021C1D812700829442 /* Chameleon_.m */; };
 		0EA7A31C1C1D812700829442 /* ChameleonConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EA7A3041C1D812700829442 /* ChameleonConstants.m */; };
 		0EA7A31D1C1D812700829442 /* NSArray+Chameleon.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EA7A3081C1D812700829442 /* NSArray+Chameleon.m */; };
@@ -106,6 +110,15 @@
 		0E136B651C19EC660070C958 /* SwipableCardCollectionLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SwipableCardCollectionLayout.m; sourceTree = "<group>"; };
 		0E136B661C19EC660070C958 /* UIColor+PiRandomColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+PiRandomColor.h"; sourceTree = "<group>"; };
 		0E136B671C19EC660070C958 /* UIColor+PiRandomColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+PiRandomColor.m"; sourceTree = "<group>"; };
+		0E2278021C245698003E3547 /* SVIndefiniteAnimatedView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVIndefiniteAnimatedView.h; sourceTree = "<group>"; };
+		0E2278031C245698003E3547 /* SVIndefiniteAnimatedView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVIndefiniteAnimatedView.m; sourceTree = "<group>"; };
+		0E2278041C245698003E3547 /* SVProgressHUD-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SVProgressHUD-Prefix.pch"; sourceTree = "<group>"; };
+		0E2278051C245698003E3547 /* SVProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = SVProgressHUD.bundle; sourceTree = "<group>"; };
+		0E2278061C245698003E3547 /* SVProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVProgressHUD.h; sourceTree = "<group>"; };
+		0E2278071C245698003E3547 /* SVProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVProgressHUD.m; sourceTree = "<group>"; };
+		0E2278081C245698003E3547 /* SVRadialGradientLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVRadialGradientLayer.h; sourceTree = "<group>"; };
+		0E2278091C245698003E3547 /* SVRadialGradientLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVRadialGradientLayer.m; sourceTree = "<group>"; };
+		0E22780E1C24579D003E3547 /* prize.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = prize.plist; sourceTree = "<group>"; };
 		0E35A5FA1C1C6A14003921A0 /* FontAwesome.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = FontAwesome.ttf; sourceTree = "<group>"; };
 		0E35A6081C1C71FA003921A0 /* HandWrittingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HandWrittingViewController.h; sourceTree = "<group>"; };
 		0E35A6091C1C71FA003921A0 /* HandWrittingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HandWrittingViewController.m; sourceTree = "<group>"; };
@@ -156,8 +169,6 @@
 		0E6D7E2D1C1B294800A5F43D /* computer2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = computer2.jpg; sourceTree = "<group>"; };
 		0E6D7E2E1C1B294800A5F43D /* qr_share.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = qr_share.jpg; sourceTree = "<group>"; };
 		0E6D7E2F1C1B294800A5F43D /* scholarship.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = scholarship.jpg; sourceTree = "<group>"; };
-		0E6D7E301C1B294800A5F43D /* sie.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = sie.jpg; sourceTree = "<group>"; };
-		0E6D7E311C1B294800A5F43D /* sie_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sie_logo.png; sourceTree = "<group>"; };
 		0E6D7E391C1B297700A5F43D /* TimeLineHeaderCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimeLineHeaderCell.h; sourceTree = "<group>"; };
 		0E6D7E3A1C1B297700A5F43D /* TimeLineHeaderCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimeLineHeaderCell.m; sourceTree = "<group>"; };
 		0E6D7E3E1C1B2D6600A5F43D /* TimeLine.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = TimeLine.storyboard; sourceTree = "<group>"; };
@@ -177,6 +188,8 @@
 		0E6D7E4E1C1B2EA100A5F43D /* SkillsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SkillsViewController.m; sourceTree = "<group>"; };
 		0E6D7E4F1C1B2EA100A5F43D /* SkillView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SkillView.h; sourceTree = "<group>"; };
 		0E6D7E501C1B2EA100A5F43D /* SkillView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SkillView.m; sourceTree = "<group>"; };
+		0E91F33F1C2155010069E4E6 /* TTTAttributedLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTTAttributedLabel.h; sourceTree = "<group>"; };
+		0E91F3401C2155010069E4E6 /* TTTAttributedLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTTAttributedLabel.m; sourceTree = "<group>"; };
 		0EA7A3001C1D812700829442 /* Chameleon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Chameleon.h; sourceTree = "<group>"; };
 		0EA7A3011C1D812700829442 /* Chameleon_.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Chameleon_.h; sourceTree = "<group>"; };
 		0EA7A3021C1D812700829442 /* Chameleon_.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Chameleon_.m; sourceTree = "<group>"; };
@@ -261,13 +274,31 @@
 				0E136B651C19EC660070C958 /* SwipableCardCollectionLayout.m */,
 				0E136B661C19EC660070C958 /* UIColor+PiRandomColor.h */,
 				0E136B671C19EC660070C958 /* UIColor+PiRandomColor.m */,
+				0E22780E1C24579D003E3547 /* prize.plist */,
 			);
 			path = CollectionCard;
+			sourceTree = "<group>";
+		};
+		0E2278011C245698003E3547 /* SVProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				0E2278021C245698003E3547 /* SVIndefiniteAnimatedView.h */,
+				0E2278031C245698003E3547 /* SVIndefiniteAnimatedView.m */,
+				0E2278041C245698003E3547 /* SVProgressHUD-Prefix.pch */,
+				0E2278051C245698003E3547 /* SVProgressHUD.bundle */,
+				0E2278061C245698003E3547 /* SVProgressHUD.h */,
+				0E2278071C245698003E3547 /* SVProgressHUD.m */,
+				0E2278081C245698003E3547 /* SVRadialGradientLayer.h */,
+				0E2278091C245698003E3547 /* SVRadialGradientLayer.m */,
+			);
+			path = SVProgressHUD;
 			sourceTree = "<group>";
 		};
 		0E35A5FC1C1C6CC1003921A0 /* Lib */ = {
 			isa = PBXGroup;
 			children = (
+				0E2278011C245698003E3547 /* SVProgressHUD */,
+				0E91F33E1C2155010069E4E6 /* TTTAttributedLabel */,
 				0EA7A2FF1C1D812600829442 /* Chameleon */,
 				0E35A6121C1C7760003921A0 /* FontAwesomeKit */,
 			);
@@ -360,8 +391,6 @@
 			children = (
 				0E35A5FA1C1C6A14003921A0 /* FontAwesome.ttf */,
 				0E6D7E2A1C1B294800A5F43D /* Prize */,
-				0E6D7E301C1B294800A5F43D /* sie.jpg */,
-				0E6D7E311C1B294800A5F43D /* sie_logo.png */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -399,6 +428,15 @@
 				0E6D7E501C1B2EA100A5F43D /* SkillView.m */,
 			);
 			path = SkillReveal;
+			sourceTree = "<group>";
+		};
+		0E91F33E1C2155010069E4E6 /* TTTAttributedLabel */ = {
+			isa = PBXGroup;
+			children = (
+				0E91F33F1C2155010069E4E6 /* TTTAttributedLabel.h */,
+				0E91F3401C2155010069E4E6 /* TTTAttributedLabel.m */,
+			);
+			path = TTTAttributedLabel;
 			sourceTree = "<group>";
 		};
 		0EA7A2FF1C1D812600829442 /* Chameleon */ = {
@@ -643,16 +681,16 @@
 				0E6D7E251C1B285100A5F43D /* timeLine.plist in Resources */,
 				0E6D7E321C1B294800A5F43D /* cet4.jpg in Resources */,
 				0E35A62F1C1C7760003921A0 /* FontAwesome.otf in Resources */,
+				0E22780B1C245698003E3547 /* SVProgressHUD.bundle in Resources */,
 				0E35A6301C1C7760003921A0 /* foundation-icons.ttf in Resources */,
 				0E35A5FB1C1C6A15003921A0 /* FontAwesome.ttf in Resources */,
 				0EBF0AED1C18301C00C8CE70 /* LaunchScreen.storyboard in Resources */,
-				0E6D7E381C1B294800A5F43D /* sie_logo.png in Resources */,
 				0E6D7E331C1B294800A5F43D /* cet6.jpg in Resources */,
 				0E35A6341C1C7760003921A0 /* zocial-regular-webfont.ttf in Resources */,
 				0EBF0AEA1C18301C00C8CE70 /* Assets.xcassets in Resources */,
 				0E6D7E361C1B294800A5F43D /* scholarship.jpg in Resources */,
 				0E6D7E341C1B294800A5F43D /* computer2.jpg in Resources */,
-				0E6D7E371C1B294800A5F43D /* sie.jpg in Resources */,
+				0E22780F1C24579D003E3547 /* prize.plist in Resources */,
 				0E6D7E571C1B2EA100A5F43D /* skills.plist in Resources */,
 				0E6D7E3F1C1B2D6600A5F43D /* TimeLine.storyboard in Resources */,
 				0E136B6B1C19EC660070C958 /* ColorCollectionCell.xib in Resources */,
@@ -692,9 +730,13 @@
 				0E6D7E521C1B2EA100A5F43D /* ProgressLabel.m in Sources */,
 				0E6D7E511C1B2EA100A5F43D /* MagicAnimator.m in Sources */,
 				0EA7A31D1C1D812700829442 /* NSArray+Chameleon.m in Sources */,
+				0E91F3411C2155010069E4E6 /* TTTAttributedLabel.m in Sources */,
 				0EA7A3221C1D812700829442 /* UIImage+ChameleonPrivate.m in Sources */,
+				0E22780D1C245698003E3547 /* SVRadialGradientLayer.m in Sources */,
 				0E35A62E1C1C7760003921A0 /* FAKZocial.m in Sources */,
+				0E22780C1C245698003E3547 /* SVProgressHUD.m in Sources */,
 				0E6D7E221C1B285100A5F43D /* AutoShowScrollToTopImg.m in Sources */,
+				0E22780A1C245698003E3547 /* SVIndefiniteAnimatedView.m in Sources */,
 				0E136B691C19EC660070C958 /* CollectionCardViewController.m in Sources */,
 				0E6D7E241C1B285100A5F43D /* Experience.m in Sources */,
 				0E35A6291C1C7760003921A0 /* FAKFoundationIcons.m in Sources */,
