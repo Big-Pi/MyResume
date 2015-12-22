@@ -19,20 +19,24 @@
 
 @end
 
+
 @implementation TimeLineTableViewCell
--(void)prepareForReuse{
-    [super prepareForReuse];
+
+@dynamic hideLine;
+
+#pragma mark - Getter Setter
+-(BOOL)hideLine{
+    return  self.dotLineView.hideLine;
 }
 
 -(void)setHideLine:(BOOL)hideLine{
-    self.dotLineView.hideLine=hideLine;
+    [self setHideLine:hideLine anim:NO];
 }
 
--(BOOL)hideLine{
-    return self.dotLineView.hideLine;
+-(void)setHideLine:(BOOL)hideLine anim:(BOOL)anim{
+    [self.dotLineView setHideLine:hideLine anim:anim];
 }
 
-#pragma mark - Getter Setter
 -(void)setDate:(NSString *)yearAndMonth{
     NSArray *yearMonth= [[DateFormatter sharedFromatter]yearMonthFromStr:yearAndMonth];
     self.yearLabel.text= yearMonth[0];

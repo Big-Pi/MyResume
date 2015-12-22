@@ -15,10 +15,13 @@
 #import "DateFormatter.h"
 #import "TabBarItemImageHelper.h"
 
+
 @interface TimeLineViewController ()<UITableViewDelegate,UITableViewDataSource>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (weak, nonatomic) IBOutlet AutoShowScrollToTopImg *scrollToTopImg;
 @property (strong,nonatomic) NSArray *experiences;
+@property (weak, nonatomic) IBOutlet UIView *experienceHeader;
+@property (strong, nonatomic) NSMutableArray *visibleHeaders;
 @end
  
 @implementation TimeLineViewController
@@ -34,21 +37,63 @@
     }
     return self;
 }
+
 -(void)viewDidLoad{
     [super viewDidLoad];
+    self.tableView.rowHeight=166;
     self.tableView.sectionHeaderHeight=66;
     self.tableView.layer.shadowOpacity=0.5;
     self.tableView.layer.shadowColor=[UIColor blackColor].CGColor;
     self.tableView.layer.shadowRadius=2;
-//    self.tableView.layer.shadowOffset=CGSizeMake(10, 10);
     self.tableView.layer.masksToBounds=NO;
+}
+
+-(BOOL)prefersStatusBarHidden{
+    return YES;
 }
 
 -(void)viewDidAppear:(BOOL)animated{
     [super viewDidAppear:animated];
+    //prepare From Anim
+    self.experienceHeader.alpha=0.0;
+    [self.visibleHeaders enumerateObjectsUsingBlock:^(UIView*  _Nonnull header, NSUInteger idx, BOOL * _Nonnull stop) {
+        header.alpha=0.0;
+    }];
+    UITableViewCell *firstCell= self.tableView.visibleCells[0];
+    CGRect fromFrame= CGRectMake(0, -firstCell.frame.size.height, firstCell.frame.size.width, firstCell.frame.size.height);
+    //
+    [self.tableView.visibleCells enumerateObjectsUsingBlock:^(__kindof TimeLineTableViewCell * _Nonnull cell, NSUInteger idx, BOOL * _Nonnull stop) {
+        [cell.superview bringSubviewToFront:cell];
+        cell.hideLine=YES;
+        CGRect toFrame=cell.frame;
+        cell.frame=fromFrame;
+        [UIView animateWithDuration:2.0 delay:0 options:UIViewAnimationOptionCurveEaseOut animations:^{
+            cell.frame=toFrame;
+        } completion:^(BOOL finished) {
+            [self.visibleHeaders enumerateObjectsUsingBlock:^(UIView*  _Nonnull header, NSUInteger idx, BOOL * _Nonnull stop) {
+                [UIView animateWithDuration:0.8 delay:0.0 options:UIViewAnimationOptionCurveEaseOut animations:^{
+                    header.alpha=1.0;
+                    self.experienceHeader.alpha=1.0;
+                } completion:^(BOOL finished) {
+                    [cell setHideLine:NO anim:YES];
+                }];
+            }];
+        }];
+    }];
+    
+
+    
 }
 
 #pragma mark - Getter Setter
+
+-(NSMutableArray *)headers{
+    if(!_visibleHeaders) {
+        _visibleHeaders=[NSMutableArray array];
+    }
+    return _visibleHeaders;
+}
+
 -(NSArray *)experiences{
     if(!_experiences){
         _experiences=[Experience allExperience];
@@ -77,13 +122,8 @@
     [cell setTitle:exp.title];
     [cell setDate:exp.time];
     [cell setCategory:exp.category];
-    [cell layoutIfNeeded];
     return cell;
 }
-
-//-(void)tableView:(UITableView *)tableView didEndDisplayingCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath{
-//    TimeLineTableViewCell *timeLineCell=(TimeLineTableViewCell*) cell;
-//}
 
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
     return self.experiences.count;
@@ -99,13 +139,8 @@
     Experience *firstExp=rowsInSection[0];
     TimeLineHeaderCell *header= [tableView dequeueReusableCellWithIdentifier:@"TimeLineHeaderCell"];
     header.titleLabel.text=firstExp.yearStr;
+    [self.headers addObject:header];
     return header;
-}
-
--(void)tableView:(UITableView *)tableView willDisplayHeaderView:(UIView *)view forSection:(NSInteger)section{
-    UITableViewHeaderFooterView *header=(UITableViewHeaderFooterView *)view;
-    header.contentView.backgroundColor=[UIColor whiteColor];
-    header.textLabel.font=[UIFont systemFontOfSize:35];
 }
 
 -(void)scrollViewDidScroll:(UIScrollView *)scrollView{

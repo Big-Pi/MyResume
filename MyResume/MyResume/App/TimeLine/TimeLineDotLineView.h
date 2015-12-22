@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface TimeLineDotLineView : UIView
-@property (strong,nonatomic,readonly) UIColor *dotColor;
 @property (assign,nonatomic) BOOL hideLine;
+@property (strong,nonatomic,readonly) UIColor *dotColor;
+-(void)setHideLine:(BOOL)hideLine anim:(BOOL)anim;
 @end

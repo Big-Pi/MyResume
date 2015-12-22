@@ -22,12 +22,8 @@
 - (void)awakeFromNib {
     UIPanGestureRecognizer *pan= [[UIPanGestureRecognizer alloc]initWithTarget:self action:@selector(pan:)];
     [self addGestureRecognizer:pan];
-    
 }
--(void)didMoveToSuperview{
-    [super didMoveToSuperview];
-    
-}
+
 -(void)layoutSubviews{
     [super layoutSubviews];
     //
@@ -36,6 +32,8 @@
     //在这设置阴影 此时自己的bounds已经由autolayout设置完了。。在awakefromnib里self.bounds＝50*50;
 //    NSLog(@"%@",NSStringFromCGRect(self.bounds));
     self.colorView.layer.cornerRadius=25;
+    self.archivementImageView.layer.cornerRadius=25;
+    self.archivementImageView.clipsToBounds=YES;
     self.layer.shadowOffset=CGSizeMake(1, -1);
     self.layer.shadowColor=[UIColor blackColor].CGColor;
     self.layer.shadowRadius=6;
@@ -47,8 +45,8 @@
     self.layer.shadowPath=[UIBezierPath bezierPathWithRect:self.bounds].CGPath;
     
     //把layer渲染成image 据说不卡。。边缘平滑了。。但是非常卡。。模拟器
-    //    self.layer.shouldRasterize=YES;
-    //    self.layer.rasterizationScale=[UIScreen mainScreen].scale;
+        self.layer.shouldRasterize=YES;
+        self.layer.rasterizationScale=[UIScreen mainScreen].scale;
 }
 
 
@@ -58,12 +56,17 @@
         case UIGestureRecognizerStateBegan: {
             self.panStartPoint=currentPoint;
             self.panLastPoint=currentPoint;
-            [self.delegate ColorCollectionCell:self  beginPan:currentPoint];
+            if([self.delegate respondsToSelector:@selector(ColorCollectionCell:beginPan:)]){
+                [self.delegate ColorCollectionCell:self  beginPan:currentPoint];
+            }
             break;
         }
         case UIGestureRecognizerStateChanged: {
             self.transform=CGAffineTransformTranslate(self.transform,currentPoint.x-self.panLastPoint.x, currentPoint.y-self.panLastPoint.y);
             self.panLastPoint=currentPoint;
+            if([self.delegate respondsToSelector:@selector(ColorCollectionCell:panning:)]){
+                [self.delegate ColorCollectionCell:self panning:currentPoint];
+            }
             break;
         }
         case UIGestureRecognizerStateEnded:
@@ -73,10 +76,13 @@
             CGFloat finalDeltaY=currentPoint.y-self.panStartPoint.y;
             if(fabs(finalDeltaX)>self.xDeltaToDelete || fabs(finalDeltaY)>self.yDeltaToDelete){
                 //移动一定的距离。。就是删除cell
-                [self.delegate ColorCollectionCell:self delete:CGVectorMake(finalDeltaX, finalDeltaY)];
+                if([self.delegate respondsToSelector:@selector(ColorCollectionCell:delete:)]){
+                    [self.delegate ColorCollectionCell:self delete:CGVectorMake(finalDeltaX, finalDeltaY)];
+                }
             }else{
-                [self.delegate ColorCollectionCell:self endPan:currentPoint
-                 ];
+                if([self.delegate respondsToSelector:@selector(ColorCollectionCell:endPan:)]){
+                    [self.delegate ColorCollectionCell:self endPan:currentPoint];
+                }
             }
             break;
         }

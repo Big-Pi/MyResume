@@ -12,11 +12,15 @@
 @interface TimeLineDotLineView ()
 @property (strong,nonatomic) UIColor *dotColor;
 @property (assign,nonatomic) CGFloat paddingLeftRightTop;
+
 //
 @property (strong,nonatomic) UIBezierPath *path;
 @property (strong,nonatomic) UIBezierPath *dotPath;
 @property (strong,nonatomic) UIBezierPath *linePath;
 @property (assign,nonatomic) CGRect dotRectRef;
+@property (strong,nonatomic) CAShapeLayer *dotLayer;
+@property (strong,nonatomic) CAShapeLayer *lineLayer;
+
 @end
 
 @implementation TimeLineDotLineView
@@ -25,7 +29,6 @@
     self = [super initWithCoder:coder];
     if (self) {
         [self privateInit];
-        self.contentMode=UIViewContentModeScaleAspectFit;
     }
     return self;
 }
@@ -36,6 +39,7 @@
 }
 
 -(void)privateInit{
+//    self.contentMode=UIViewContentModeRedraw;
     self.paddingLeftRightTop=self.bounds.size.width/10.0;
 }
 
@@ -52,7 +56,6 @@
 
 -(UIBezierPath *)linePath{
     if(!_linePath){
-        
         CGFloat lineY=CGRectGetMaxY(self.dotRectRef) +self.paddingLeftRightTop;
         CGPoint lineOrigin=CGPointMake(self.bounds.origin.x+self.bounds.size.width/3, lineY);
         CGSize lineSize=CGSizeMake(self.bounds.size.width/3, self.bounds.size.height-30);
@@ -62,16 +65,24 @@
     return _linePath;
 }
 
-- (void)drawRect:(CGRect)rect {
-    [self.dotColor setFill]; //TODO animate dot colors
-    [self.dotPath fill];
-    if(self.hideLine){
-        return;
-    }
-    [[UIColor colorWithRed:0 green:0 blue:0 alpha:0.1]setFill];
-    [self.linePath fill];
-}
 
+- (void)drawRect:(CGRect)rect {
+    static CGColorRef lineColor;
+    if(!lineColor){
+        lineColor=[UIColor colorWithRed:0 green:0 blue:0 alpha:0.1].CGColor;
+    }
+    //
+    self.dotLayer=[CAShapeLayer layer];
+    self.dotLayer.path=self.dotPath.CGPath;
+    self.dotLayer.fillColor=self.dotColor.CGColor;
+    [self.layer addSublayer:self.dotLayer];
+    //
+    self.lineLayer=[CAShapeLayer layer];
+    self.lineLayer.path=self.linePath.CGPath;
+    self.lineLayer.fillColor=lineColor;
+    [self.layer addSublayer:self.lineLayer];
+
+}
 
 -(UIColor *)dotColor{
     if(!_dotColor){
@@ -80,9 +91,20 @@
     return _dotColor;
 }
 
--(void)setHideLine:(BOOL)hideLine{
+-(void)setHideLine:(BOOL)hideLine anim:(BOOL)anim{
     _hideLine=hideLine;
-    [self setNeedsDisplay];
+    if(_hideLine){
+        self.lineLayer.opacity=0.0;
+    }else{
+        self.lineLayer.opacity=1.0;
+        if(anim){
+            CABasicAnimation *alphaAnim=[CABasicAnimation animationWithKeyPath:@"opacity"];
+            alphaAnim.fromValue=@0.0;
+            alphaAnim.toValue=@1.0;
+            alphaAnim.duration=1.0;
+            [self.lineLayer addAnimation:alphaAnim forKey:nil];
+        }
+    }
 }
 
 

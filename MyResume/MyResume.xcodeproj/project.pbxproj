@@ -17,6 +17,7 @@
 		0E22780C1C245698003E3547 /* SVProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E2278071C245698003E3547 /* SVProgressHUD.m */; };
 		0E22780D1C245698003E3547 /* SVRadialGradientLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E2278091C245698003E3547 /* SVRadialGradientLayer.m */; };
 		0E22780F1C24579D003E3547 /* prize.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0E22780E1C24579D003E3547 /* prize.plist */; };
+		0E2BAF551C2971670030F731 /* Archivement.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E2BAF541C2971670030F731 /* Archivement.m */; };
 		0E35A5FB1C1C6A15003921A0 /* FontAwesome.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0E35A5FA1C1C6A14003921A0 /* FontAwesome.ttf */; };
 		0E35A60C1C1C71FA003921A0 /* HandWrittingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E35A6091C1C71FA003921A0 /* HandWrittingViewController.m */; };
 		0E35A60D1C1C71FA003921A0 /* MagicTransitionSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E35A60B1C1C71FA003921A0 /* MagicTransitionSegue.m */; };
@@ -43,11 +44,6 @@
 		0E6D7E261C1B285100A5F43D /* TimeLineDotLineView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E6D7E1D1C1B285100A5F43D /* TimeLineDotLineView.m */; };
 		0E6D7E271C1B285100A5F43D /* TimeLineTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E6D7E1F1C1B285100A5F43D /* TimeLineTableViewCell.m */; };
 		0E6D7E281C1B285100A5F43D /* TimeLineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E6D7E211C1B285100A5F43D /* TimeLineViewController.m */; };
-		0E6D7E321C1B294800A5F43D /* cet4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0E6D7E2B1C1B294800A5F43D /* cet4.jpg */; };
-		0E6D7E331C1B294800A5F43D /* cet6.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0E6D7E2C1C1B294800A5F43D /* cet6.jpg */; };
-		0E6D7E341C1B294800A5F43D /* computer2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0E6D7E2D1C1B294800A5F43D /* computer2.jpg */; };
-		0E6D7E351C1B294800A5F43D /* qr_share.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0E6D7E2E1C1B294800A5F43D /* qr_share.jpg */; };
-		0E6D7E361C1B294800A5F43D /* scholarship.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0E6D7E2F1C1B294800A5F43D /* scholarship.jpg */; };
 		0E6D7E3B1C1B297700A5F43D /* TimeLineHeaderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E6D7E3A1C1B297700A5F43D /* TimeLineHeaderCell.m */; };
 		0E6D7E3F1C1B2D6600A5F43D /* TimeLine.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0E6D7E3E1C1B2D6600A5F43D /* TimeLine.storyboard */; };
 		0E6D7E511C1B2EA100A5F43D /* MagicAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E6D7E421C1B2EA100A5F43D /* MagicAnimator.m */; };
@@ -119,6 +115,8 @@
 		0E2278081C245698003E3547 /* SVRadialGradientLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVRadialGradientLayer.h; sourceTree = "<group>"; };
 		0E2278091C245698003E3547 /* SVRadialGradientLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVRadialGradientLayer.m; sourceTree = "<group>"; };
 		0E22780E1C24579D003E3547 /* prize.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = prize.plist; sourceTree = "<group>"; };
+		0E2BAF531C2971670030F731 /* Archivement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Archivement.h; sourceTree = "<group>"; };
+		0E2BAF541C2971670030F731 /* Archivement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Archivement.m; sourceTree = "<group>"; };
 		0E35A5FA1C1C6A14003921A0 /* FontAwesome.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = FontAwesome.ttf; sourceTree = "<group>"; };
 		0E35A6081C1C71FA003921A0 /* HandWrittingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HandWrittingViewController.h; sourceTree = "<group>"; };
 		0E35A6091C1C71FA003921A0 /* HandWrittingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HandWrittingViewController.m; sourceTree = "<group>"; };
@@ -164,11 +162,6 @@
 		0E6D7E1F1C1B285100A5F43D /* TimeLineTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimeLineTableViewCell.m; sourceTree = "<group>"; };
 		0E6D7E201C1B285100A5F43D /* TimeLineViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimeLineViewController.h; sourceTree = "<group>"; };
 		0E6D7E211C1B285100A5F43D /* TimeLineViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimeLineViewController.m; sourceTree = "<group>"; };
-		0E6D7E2B1C1B294800A5F43D /* cet4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = cet4.jpg; sourceTree = "<group>"; };
-		0E6D7E2C1C1B294800A5F43D /* cet6.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = cet6.jpg; sourceTree = "<group>"; };
-		0E6D7E2D1C1B294800A5F43D /* computer2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = computer2.jpg; sourceTree = "<group>"; };
-		0E6D7E2E1C1B294800A5F43D /* qr_share.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = qr_share.jpg; sourceTree = "<group>"; };
-		0E6D7E2F1C1B294800A5F43D /* scholarship.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = scholarship.jpg; sourceTree = "<group>"; };
 		0E6D7E391C1B297700A5F43D /* TimeLineHeaderCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimeLineHeaderCell.h; sourceTree = "<group>"; };
 		0E6D7E3A1C1B297700A5F43D /* TimeLineHeaderCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimeLineHeaderCell.m; sourceTree = "<group>"; };
 		0E6D7E3E1C1B2D6600A5F43D /* TimeLine.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = TimeLine.storyboard; sourceTree = "<group>"; };
@@ -265,6 +258,7 @@
 		0E136B5B1C19EC660070C958 /* CollectionCard */ = {
 			isa = PBXGroup;
 			children = (
+				0E2BAF521C2971410030F731 /* Model */,
 				0E136B5D1C19EC660070C958 /* CollectionCardViewController.h */,
 				0E136B5E1C19EC660070C958 /* CollectionCardViewController.m */,
 				0E136B5F1C19EC660070C958 /* ColorCollectionCell.h */,
@@ -292,6 +286,15 @@
 				0E2278091C245698003E3547 /* SVRadialGradientLayer.m */,
 			);
 			path = SVProgressHUD;
+			sourceTree = "<group>";
+		};
+		0E2BAF521C2971410030F731 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0E2BAF531C2971670030F731 /* Archivement.h */,
+				0E2BAF541C2971670030F731 /* Archivement.m */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		0E35A5FC1C1C6CC1003921A0 /* Lib */ = {
@@ -390,21 +393,8 @@
 			isa = PBXGroup;
 			children = (
 				0E35A5FA1C1C6A14003921A0 /* FontAwesome.ttf */,
-				0E6D7E2A1C1B294800A5F43D /* Prize */,
 			);
 			path = Resources;
-			sourceTree = "<group>";
-		};
-		0E6D7E2A1C1B294800A5F43D /* Prize */ = {
-			isa = PBXGroup;
-			children = (
-				0E6D7E2B1C1B294800A5F43D /* cet4.jpg */,
-				0E6D7E2C1C1B294800A5F43D /* cet6.jpg */,
-				0E6D7E2D1C1B294800A5F43D /* computer2.jpg */,
-				0E6D7E2E1C1B294800A5F43D /* qr_share.jpg */,
-				0E6D7E2F1C1B294800A5F43D /* scholarship.jpg */,
-			);
-			path = Prize;
 			sourceTree = "<group>";
 		};
 		0E6D7E401C1B2EA100A5F43D /* SkillReveal */ = {
@@ -677,19 +667,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0E6D7E351C1B294800A5F43D /* qr_share.jpg in Resources */,
 				0E6D7E251C1B285100A5F43D /* timeLine.plist in Resources */,
-				0E6D7E321C1B294800A5F43D /* cet4.jpg in Resources */,
 				0E35A62F1C1C7760003921A0 /* FontAwesome.otf in Resources */,
 				0E22780B1C245698003E3547 /* SVProgressHUD.bundle in Resources */,
 				0E35A6301C1C7760003921A0 /* foundation-icons.ttf in Resources */,
 				0E35A5FB1C1C6A15003921A0 /* FontAwesome.ttf in Resources */,
 				0EBF0AED1C18301C00C8CE70 /* LaunchScreen.storyboard in Resources */,
-				0E6D7E331C1B294800A5F43D /* cet6.jpg in Resources */,
 				0E35A6341C1C7760003921A0 /* zocial-regular-webfont.ttf in Resources */,
 				0EBF0AEA1C18301C00C8CE70 /* Assets.xcassets in Resources */,
-				0E6D7E361C1B294800A5F43D /* scholarship.jpg in Resources */,
-				0E6D7E341C1B294800A5F43D /* computer2.jpg in Resources */,
 				0E22780F1C24579D003E3547 /* prize.plist in Resources */,
 				0E6D7E571C1B2EA100A5F43D /* skills.plist in Resources */,
 				0E6D7E3F1C1B2D6600A5F43D /* TimeLine.storyboard in Resources */,
@@ -769,6 +754,7 @@
 				0EA7A3201C1D812700829442 /* UIColor+Chameleon.m in Sources */,
 				0E35A62D1C1C7760003921A0 /* FAKOcticons.m in Sources */,
 				0EA7A31E1C1D812700829442 /* UIAppearance+Swift.m in Sources */,
+				0E2BAF551C2971670030F731 /* Archivement.m in Sources */,
 				0EBF0B261C1830D500C8CE70 /* main.m in Sources */,
 				0EA7A3241C1D812700829442 /* UINavigationController+Chameleon.m in Sources */,
 				0E35A62A1C1C7760003921A0 /* FAKIcon.m in Sources */,

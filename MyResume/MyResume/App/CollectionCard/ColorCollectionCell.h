@@ -9,8 +9,8 @@
 #import <UIKit/UIKit.h>
 @class ColorCollectionCell;
 
-@protocol ColorCollectionCellDelegate
-
+@protocol ColorCollectionCellDelegate<NSObject>
+@optional
 -(void)ColorCollectionCell:(ColorCollectionCell*)cell beginPan:(CGPoint)currentPoint;
 -(void)ColorCollectionCell:(ColorCollectionCell*)cell panning:(CGPoint)currentPoint;
 -(void)ColorCollectionCell:(ColorCollectionCell*)cell endPan:(CGPoint)currentPoint;
@@ -19,6 +19,8 @@
 @end
 
 @interface ColorCollectionCell : UICollectionViewCell
+@property (weak, nonatomic) IBOutlet UIImageView *archivementImageView;
+@property (weak, nonatomic) IBOutlet UILabel *titleLabel;
 @property (weak, nonatomic) IBOutlet UIView *colorView;
 @property(nonatomic,weak) id<ColorCollectionCellDelegate> delegate;
 @end

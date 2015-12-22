@@ -14,4 +14,5 @@
 -(void)setTitle:(NSString*)title;
 -(void)setDate:(NSString*)yearAndMonth;
 -(void)setCategory:(NSString *)category;
+-(void)setHideLine:(BOOL)hideLine anim:(BOOL)anim;
 @end

@@ -1,14 +1,48 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
-<!--
-   prize.plist
-   MyResume
-
-   Created by pi on 15/12/18.
-   Copyright (c) 2015年 pi. All rights reserved.
--->
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
+<array>
+	<dict>
+		<key>img</key>
+		<string>cet6</string>
+		<key>title</key>
+		<string>英语六级</string>
+	</dict>
     <dict>
-    
+        <key>img</key>
+        <string>cet4</string>
+        <key>title</key>
+        <string>英语四级</string>
     </dict>
+    <dict>
+        <key>img</key>
+        <string>NCR2</string>
+        <key>title</key>
+        <string>国家计算机二级</string>
+    </dict>
+    <dict>
+        <key>img</key>
+        <string>QR_Share</string>
+        <key>title</key>
+        <string>辽宁省移动开发大赛三等奖</string>
+    </dict>
+    <dict>
+        <key>img</key>
+        <string>scholarship</string>
+        <key>title</key>
+        <string>单项奖学金</string>
+    </dict>
+    <dict>
+        <key>img</key>
+        <string>archivement</string>
+        <key>title</key>
+        <string>大学成绩单</string>
+    </dict>
+    <dict>
+        <key>img</key>
+        <string>recommand</string>
+        <key>title</key>
+        <string>大学生择业推荐材料</string>
+    </dict>
+</array>
 </plist>

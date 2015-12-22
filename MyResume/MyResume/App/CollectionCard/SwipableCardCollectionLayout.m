@@ -20,16 +20,6 @@
 
 @implementation SwipableCardCollectionLayout
 
-
-- (instancetype)init
-{
-    self = [super init];
-    if (self) {
-        
-    }
-    return self;
-}
-
 -(void)prepareLayout{
     [super prepareLayout];
     self.collectionView.contentOffset=CGPointZero;

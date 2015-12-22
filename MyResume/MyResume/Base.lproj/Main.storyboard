@@ -279,7 +279,7 @@
                                                     <color key="textColor" red="0.28627450980000002" green="0.31372549020000001" blue="0.35294117650000001" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="● TinyDo - 一个iOS极简风格的ToDo列表" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1fH-zi-ehP" customClass="TTTAttributedLabel">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="● TinyDo - 一个iOS极简风格的ToDo列表" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1fH-zi-ehP" customClass="TTTAttributedLabel">
                                                     <rect key="frame" x="58" y="52" width="330" height="22"/>
                                                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
                                                     <color key="textColor" red="0.47843137250000001" green="0.47843137250000001" blue="0.47843137250000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -297,7 +297,7 @@
                                                         <outlet property="delegate" destination="9Ck-cD-qCp" id="h3l-RZ-w2E"/>
                                                     </connections>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="● ConstGenerator - Xcode 生成常量的插件" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mS5-bj-0Yf" customClass="TTTAttributedLabel">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="● ConstGenerator - Xcode 生成常量的插件" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mS5-bj-0Yf" customClass="TTTAttributedLabel">
                                                     <rect key="frame" x="58" y="142" width="353" height="22"/>
                                                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
                                                     <color key="textColor" red="0.47843137250000001" green="0.47843137250000001" blue="0.47843137250000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -445,11 +445,6 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Pi" id="jQn-gy-wLP">
-                        <barButtonItem key="leftBarButtonItem" systemItem="add" id="Kp1-Dv-Q6J">
-                            <connections>
-                                <action selector="addNewItem:" destination="ViW-vo-7qD" id="UIH-oI-Xn4"/>
-                            </connections>
-                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="refresh" id="Qjw-wy-RIN">
                             <connections>
                                 <action selector="reloadCards:" destination="ViW-vo-7qD" id="RqF-Fq-F1c"/>
@@ -462,7 +457,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sar-AD-J2J" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2032" y="2201"/>
+            <point key="canvasLocation" x="2023" y="2201"/>
         </scene>
         <!--个人-->
         <scene sceneID="GOE-uW-2j9">
