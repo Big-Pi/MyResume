@@ -17,4 +17,5 @@
 @property (copy,nonatomic,readonly) NSString *category;
 
 +(NSArray*)allExperience;
+-(NSString*)categoryStr;
 @end

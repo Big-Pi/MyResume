@@ -13,7 +13,7 @@
 #import "AutoShowScrollToTopImg.h"
 #import "Experience.h"
 #import "DateFormatter.h"
-#import "TabBarItemImageHelper.h"
+#import "FontAwsomeImageHelper.h"
 
 
 @interface TimeLineViewController ()<UITableViewDelegate,UITableViewDataSource>
@@ -33,7 +33,7 @@
     self = [super initWithCoder:coder];
     if (self) {
         self.tabBarItem.title=@"经验";
-        self.tabBarItem.image=[TabBarItemImageHelper timeLineTabbarItemImage];
+        self.tabBarItem.image=[FontAwsomeImageHelper timeLineTabbarItemImage];
     }
     return self;
 }
@@ -46,7 +46,17 @@
     self.tableView.layer.shadowColor=[UIColor blackColor].CGColor;
     self.tableView.layer.shadowRadius=2;
     self.tableView.layer.masksToBounds=NO;
+    
 }
+
+//Landscape for this VC //not work after ios8
+//-(UIInterfaceOrientationMask)supportedInterfaceOrientations{
+//    return UIInterfaceOrientationMaskLandscape;
+//}
+//
+//-(UIInterfaceOrientation)preferredInterfaceOrientationForPresentation{
+//    return UIInterfaceOrientationLandscapeLeft|UIInterfaceOrientationLandscapeRight;
+//}
 
 -(BOOL)prefersStatusBarHidden{
     return YES;
@@ -61,6 +71,7 @@
     }];
     UITableViewCell *firstCell= self.tableView.visibleCells[0];
     CGRect fromFrame= CGRectMake(0, -firstCell.frame.size.height, firstCell.frame.size.width, firstCell.frame.size.height);
+    self.tableView.scrollEnabled=NO;
     //
     [self.tableView.visibleCells enumerateObjectsUsingBlock:^(__kindof TimeLineTableViewCell * _Nonnull cell, NSUInteger idx, BOOL * _Nonnull stop) {
         [cell.superview bringSubviewToFront:cell];
@@ -75,6 +86,7 @@
                     header.alpha=1.0;
                     self.experienceHeader.alpha=1.0;
                 } completion:^(BOOL finished) {
+                    self.tableView.scrollEnabled=YES;
                     [cell setHideLine:NO anim:YES];
                 }];
             }];
@@ -121,7 +133,12 @@
     Experience *exp=self.experiences[indexPath.section][indexPath.row];
     [cell setTitle:exp.title];
     [cell setDate:exp.time];
-    [cell setCategory:exp.category];
+    [cell setCategory:[exp categoryStr]];
+    
+    
+    NSDictionary *fontAwesomeImg= @{@"0":[FontAwsomeImageHelper graduationCapImage],@"1":[FontAwsomeImageHelper bookImage],@"2":[FontAwsomeImageHelper wrenchImage]};
+    UIImage *img=fontAwesomeImg[exp.category];
+    [cell setCategoryImage:img];
     return cell;
 }
 

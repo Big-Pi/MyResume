@@ -11,8 +11,10 @@
 @interface TimeLineTableViewCell : UITableViewCell
 @property (assign,nonatomic) BOOL hideLine;
 
+
 -(void)setTitle:(NSString*)title;
 -(void)setDate:(NSString*)yearAndMonth;
 -(void)setCategory:(NSString *)category;
 -(void)setHideLine:(BOOL)hideLine anim:(BOOL)anim;
+-(void)setCategoryImage:(UIImage*)image;
 @end

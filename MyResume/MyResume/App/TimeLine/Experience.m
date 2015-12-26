@@ -38,7 +38,7 @@
     return allExperience;
 }
 
--(NSString *)category{
+-(NSString *)categoryStr{
     switch ([_category integerValue]) {
         case 0:
             return @"教育经历";
@@ -52,6 +52,7 @@
     }
     return nil;
 }
+
 +(instancetype)experienceWithDic:(NSDictionary *)dic{
     Experience *exp=[[Experience alloc]init];
     exp.time = dic[@"time"];

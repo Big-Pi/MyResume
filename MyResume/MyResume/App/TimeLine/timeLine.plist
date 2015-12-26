@@ -42,7 +42,7 @@
 			<string></string>
 		</dict>
 		<dict>
-			<key>New item</key>
+			<key>category</key>
 			<string>0</string>
 			<key>time</key>
 			<string>2013.6</string>
@@ -240,7 +240,7 @@
 	</array>
 	<array>
 		<dict>
-			<key>catrgory</key>
+			<key>category</key>
 			<string>0</string>
 			<key>time</key>
 			<string>2016.7</string>

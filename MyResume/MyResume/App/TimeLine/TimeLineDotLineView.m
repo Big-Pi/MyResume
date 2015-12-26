@@ -29,6 +29,7 @@
     self = [super initWithCoder:coder];
     if (self) {
         [self privateInit];
+        _dotColor=[UIColor randomColor];
     }
     return self;
 }
@@ -41,6 +42,21 @@
 -(void)privateInit{
 //    self.contentMode=UIViewContentModeRedraw;
     self.paddingLeftRightTop=self.bounds.size.width/10.0;
+    
+    static CGColorRef lineColor;
+    if(!lineColor){
+        lineColor=[UIColor colorWithRed:0 green:0 blue:0 alpha:0.1].CGColor;
+    }
+    //
+    self.dotLayer=[CAShapeLayer layer];
+    self.dotLayer.path=self.dotPath.CGPath;
+    self.dotLayer.fillColor=self.dotColor.CGColor;
+    [self.layer addSublayer:self.dotLayer];
+    //
+    self.lineLayer=[CAShapeLayer layer];
+    self.lineLayer.path=self.linePath.CGPath;
+    self.lineLayer.fillColor=lineColor;
+    [self.layer addSublayer:self.lineLayer];
 }
 
 -(UIBezierPath *)dotPath{
@@ -58,37 +74,11 @@
     if(!_linePath){
         CGFloat lineY=CGRectGetMaxY(self.dotRectRef) +self.paddingLeftRightTop;
         CGPoint lineOrigin=CGPointMake(self.bounds.origin.x+self.bounds.size.width/3, lineY);
-        CGSize lineSize=CGSizeMake(self.bounds.size.width/3, self.bounds.size.height-30);
+        CGSize lineSize=CGSizeMake(self.bounds.size.width/3, self.bounds.size.height-self.paddingLeftRightTop*2-self.dotRectRef.size.height);
         CGRect lineRect=CGRectMake(lineOrigin.x, lineOrigin.y, lineSize.width, lineSize.height);
         _linePath=[UIBezierPath bezierPathWithRect:lineRect];
     }
     return _linePath;
-}
-
-
-- (void)drawRect:(CGRect)rect {
-    static CGColorRef lineColor;
-    if(!lineColor){
-        lineColor=[UIColor colorWithRed:0 green:0 blue:0 alpha:0.1].CGColor;
-    }
-    //
-    self.dotLayer=[CAShapeLayer layer];
-    self.dotLayer.path=self.dotPath.CGPath;
-    self.dotLayer.fillColor=self.dotColor.CGColor;
-    [self.layer addSublayer:self.dotLayer];
-    //
-    self.lineLayer=[CAShapeLayer layer];
-    self.lineLayer.path=self.linePath.CGPath;
-    self.lineLayer.fillColor=lineColor;
-    [self.layer addSublayer:self.lineLayer];
-
-}
-
--(UIColor *)dotColor{
-    if(!_dotColor){
-        _dotColor=[UIColor randomColor];
-    }
-    return _dotColor;
 }
 
 -(void)setHideLine:(BOOL)hideLine anim:(BOOL)anim{

@@ -36,7 +36,7 @@
 		0E35A6331C1C7760003921A0 /* octicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0E35A6261C1C7760003921A0 /* octicons.ttf */; };
 		0E35A6341C1C7760003921A0 /* zocial-regular-webfont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0E35A6271C1C7760003921A0 /* zocial-regular-webfont.ttf */; };
 		0E35A6381C1C7878003921A0 /* AboutMeTableController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E35A6371C1C7878003921A0 /* AboutMeTableController.m */; };
-		0E35A63B1C1C7CFC003921A0 /* TabBarItemImageHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E35A63A1C1C7CFC003921A0 /* TabBarItemImageHelper.m */; };
+		0E35A63B1C1C7CFC003921A0 /* FontAwsomeImageHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E35A63A1C1C7CFC003921A0 /* FontAwsomeImageHelper.m */; };
 		0E6D7E221C1B285100A5F43D /* AutoShowScrollToTopImg.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E6D7E161C1B285100A5F43D /* AutoShowScrollToTopImg.m */; };
 		0E6D7E231C1B285100A5F43D /* DateFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E6D7E181C1B285100A5F43D /* DateFormatter.m */; };
 		0E6D7E241C1B285100A5F43D /* Experience.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E6D7E1A1C1B285100A5F43D /* Experience.m */; };
@@ -147,8 +147,8 @@
 		0E35A6271C1C7760003921A0 /* zocial-regular-webfont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "zocial-regular-webfont.ttf"; sourceTree = "<group>"; };
 		0E35A6361C1C7878003921A0 /* AboutMeTableController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutMeTableController.h; sourceTree = "<group>"; };
 		0E35A6371C1C7878003921A0 /* AboutMeTableController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutMeTableController.m; sourceTree = "<group>"; };
-		0E35A6391C1C7CFC003921A0 /* TabBarItemImageHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TabBarItemImageHelper.h; sourceTree = "<group>"; };
-		0E35A63A1C1C7CFC003921A0 /* TabBarItemImageHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TabBarItemImageHelper.m; sourceTree = "<group>"; };
+		0E35A6391C1C7CFC003921A0 /* FontAwsomeImageHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FontAwsomeImageHelper.h; sourceTree = "<group>"; };
+		0E35A63A1C1C7CFC003921A0 /* FontAwsomeImageHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FontAwsomeImageHelper.m; sourceTree = "<group>"; };
 		0E6D7E151C1B285100A5F43D /* AutoShowScrollToTopImg.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AutoShowScrollToTopImg.h; sourceTree = "<group>"; };
 		0E6D7E161C1B285100A5F43D /* AutoShowScrollToTopImg.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AutoShowScrollToTopImg.m; sourceTree = "<group>"; };
 		0E6D7E171C1B285100A5F43D /* DateFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DateFormatter.h; sourceTree = "<group>"; };
@@ -545,8 +545,8 @@
 				0EBF0B181C1830D500C8CE70 /* TextPathHelper.m */,
 				0EBF0B191C1830D500C8CE70 /* UIImage+ImageEffects.h */,
 				0EBF0B1A1C1830D500C8CE70 /* UIImage+ImageEffects.m */,
-				0E35A6391C1C7CFC003921A0 /* TabBarItemImageHelper.h */,
-				0E35A63A1C1C7CFC003921A0 /* TabBarItemImageHelper.m */,
+				0E35A6391C1C7CFC003921A0 /* FontAwsomeImageHelper.h */,
+				0E35A63A1C1C7CFC003921A0 /* FontAwsomeImageHelper.m */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -737,7 +737,7 @@
 				0EA7A31C1C1D812700829442 /* ChameleonConstants.m in Sources */,
 				0E6D7E3B1C1B297700A5F43D /* TimeLineHeaderCell.m in Sources */,
 				0EBF0B221C1830D500C8CE70 /* TextPathHelper.m in Sources */,
-				0E35A63B1C1C7CFC003921A0 /* TabBarItemImageHelper.m in Sources */,
+				0E35A63B1C1C7CFC003921A0 /* FontAwsomeImageHelper.m in Sources */,
 				0EA7A31F1C1D812700829442 /* UIButton+Chameleon.m in Sources */,
 				0E136B6E1C19EC660070C958 /* UIColor+PiRandomColor.m in Sources */,
 				0E35A62B1C1C7760003921A0 /* FAKIonIcons.m in Sources */,
@@ -904,6 +904,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = BigPi.MyResume;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Debug;
 		};
@@ -916,6 +917,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = BigPi.MyResume;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Release;
 		};

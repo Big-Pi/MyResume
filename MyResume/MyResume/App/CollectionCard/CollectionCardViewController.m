@@ -10,7 +10,7 @@
 #import "ColorCollectionCell.h"
 #import "SwipableCardCollectionLayout.h"
 #import "UIColor+PiRandomColor.h"
-#import "TabBarItemImageHelper.h"
+#import "FontAwsomeImageHelper.h"
 #import "Archivement.h"
 
 @interface CollectionCardViewController ()<UICollectionViewDataSource,ColorCollectionCellDelegate, SwipableCardCollectionLayoutDelegate>
@@ -27,7 +27,7 @@
     self = [super initWithCoder:coder];
     if (self) {
         self.tabBarItem.title=@"奖项";
-        self.tabBarItem.image=[TabBarItemImageHelper collectionCardsTabbarItemImage];
+        self.tabBarItem.image=[FontAwsomeImageHelper collectionCardsTabbarItemImage];
     }
     return self;
 }
@@ -79,7 +79,7 @@
 }
 
 -(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
-    NSLog(@"selected : %d",indexPath.item);
+//    NSLog(@"selected : %ld",(long)indexPath.item);
 }
 
 -(CGVector)deleteCellVector{

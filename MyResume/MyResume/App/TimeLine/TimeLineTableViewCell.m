@@ -16,9 +16,9 @@
 @property (weak, nonatomic) IBOutlet UILabel *monthLabel;
 @property (weak, nonatomic) IBOutlet UILabel *yearLabel;
 @property (weak, nonatomic) IBOutlet UILabel *categoryLabel;
+@property (weak, nonatomic) IBOutlet UIImageView *categoryImageView;
 
 @end
-
 
 @implementation TimeLineTableViewCell
 
@@ -35,6 +35,11 @@
 
 -(void)setHideLine:(BOOL)hideLine anim:(BOOL)anim{
     [self.dotLineView setHideLine:hideLine anim:anim];
+}
+
+-(void)setCategoryImage:(UIImage*)image{
+    self.categoryImageView.image=[image imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
+    self.categoryImageView.tintColor=self.dotLineView.dotColor;
 }
 
 -(void)setDate:(NSString *)yearAndMonth{

@@ -8,20 +8,11 @@
 
 #import "MainViewController.h"
 #import "HandWrittingViewController.h"
-#import "FontAwesomeKit.h"
 
 @interface MainViewController ()
 
 @end
 
 @implementation MainViewController
-
-- (void)viewDidLoad {
-    [super viewDidLoad];
-}
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-}
 
 @end

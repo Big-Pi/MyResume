@@ -10,7 +10,7 @@
 #import "SkillView.h"
 #import "SkillProgressViewController.h"
 #import "MagicAnimator.h"
-#import "TabBarItemImageHelper.h"
+#import "FontAwsomeImageHelper.h"
 
 @interface SkillsViewController ()<UINavigationControllerDelegate>
 @property (strong,nonatomic) MagicAnimator *animator;
@@ -23,7 +23,7 @@
     self = [super initWithCoder:coder];
     if (self) {
         self.tabBarItem.title=@"技能";
-        self.tabBarItem.image=[TabBarItemImageHelper skillTabbarItemImage];
+        self.tabBarItem.image=[FontAwsomeImageHelper skillTabbarItemImage];
     }
     return self;
 }
