@@ -68,6 +68,7 @@
 		0EA7A3241C1D812700829442 /* UINavigationController+Chameleon.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EA7A3161C1D812700829442 /* UINavigationController+Chameleon.m */; };
 		0EA7A3251C1D812700829442 /* UIView+ChameleonPrivate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EA7A3181C1D812700829442 /* UIView+ChameleonPrivate.m */; };
 		0EA7A3261C1D812700829442 /* UIViewController+Chameleon.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EA7A31A1C1D812700829442 /* UIViewController+Chameleon.m */; };
+		0EBE4C2A1C2EFD7D008353B5 /* PhotoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EBE4C291C2EFD7D008353B5 /* PhotoViewController.m */; };
 		0EBF0AE81C18301C00C8CE70 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0EBF0AE61C18301C00C8CE70 /* Main.storyboard */; };
 		0EBF0AEA1C18301C00C8CE70 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0EBF0AE91C18301C00C8CE70 /* Assets.xcassets */; };
 		0EBF0AED1C18301C00C8CE70 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0EBF0AEB1C18301C00C8CE70 /* LaunchScreen.storyboard */; };
@@ -210,6 +211,8 @@
 		0EA7A3181C1D812700829442 /* UIView+ChameleonPrivate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+ChameleonPrivate.m"; sourceTree = "<group>"; };
 		0EA7A3191C1D812700829442 /* UIViewController+Chameleon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Chameleon.h"; sourceTree = "<group>"; };
 		0EA7A31A1C1D812700829442 /* UIViewController+Chameleon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Chameleon.m"; sourceTree = "<group>"; };
+		0EBE4C281C2EFD7D008353B5 /* PhotoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoViewController.h; sourceTree = "<group>"; };
+		0EBE4C291C2EFD7D008353B5 /* PhotoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoViewController.m; sourceTree = "<group>"; };
 		0EBF0ADA1C18301C00C8CE70 /* MyResume.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyResume.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0EBF0AE71C18301C00C8CE70 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0EBF0AE91C18301C00C8CE70 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -269,6 +272,8 @@
 				0E136B661C19EC660070C958 /* UIColor+PiRandomColor.h */,
 				0E136B671C19EC660070C958 /* UIColor+PiRandomColor.m */,
 				0E22780E1C24579D003E3547 /* prize.plist */,
+				0EBE4C281C2EFD7D008353B5 /* PhotoViewController.h */,
+				0EBE4C291C2EFD7D008353B5 /* PhotoViewController.m */,
 			);
 			path = CollectionCard;
 			sourceTree = "<group>";
@@ -741,6 +746,7 @@
 				0EA7A31F1C1D812700829442 /* UIButton+Chameleon.m in Sources */,
 				0E136B6E1C19EC660070C958 /* UIColor+PiRandomColor.m in Sources */,
 				0E35A62B1C1C7760003921A0 /* FAKIonIcons.m in Sources */,
+				0EBE4C2A1C2EFD7D008353B5 /* PhotoViewController.m in Sources */,
 				0E6D7E541C1B2EA100A5F43D /* SkillProgressView.m in Sources */,
 				0EA7A3261C1D812700829442 /* UIViewController+Chameleon.m in Sources */,
 				0E6D7E261C1B285100A5F43D /* TimeLineDotLineView.m in Sources */,

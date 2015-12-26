@@ -12,6 +12,7 @@
 #import "UIColor+PiRandomColor.h"
 #import "FontAwsomeImageHelper.h"
 #import "Archivement.h"
+#import "PhotoViewController.h"
 
 @interface CollectionCardViewController ()<UICollectionViewDataSource,ColorCollectionCellDelegate, SwipableCardCollectionLayoutDelegate>
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
@@ -79,7 +80,18 @@
 }
 
 -(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
+    
+    [self performSegueWithIdentifier:@"showPhoto" sender:self.archivements[indexPath.row]];
 //    NSLog(@"selected : %ld",(long)indexPath.item);
+}
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    if([segue.identifier isEqualToString:@"showPhoto"]){
+        PhotoViewController *photoVC=(PhotoViewController*) segue.destinationViewController;
+        if([sender isMemberOfClass:[Archivement class]]){
+            photoVC.archivement=sender;
+        }
+    }
 }
 
 -(CGVector)deleteCellVector{

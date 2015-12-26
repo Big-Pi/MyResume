@@ -454,11 +454,44 @@
                     </navigationItem>
                     <connections>
                         <outlet property="collectionView" destination="4M9-fy-hCi" id="Qsk-Fy-m90"/>
+                        <segue destination="CQL-Sp-e2F" kind="show" identifier="showPhoto" id="Rv3-NZ-gk8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sar-AD-J2J" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2023" y="2201"/>
+        </scene>
+        <!--Photo View Controller-->
+        <scene sceneID="frH-x1-JLr">
+            <objects>
+                <viewController id="CQL-Sp-e2F" customClass="PhotoViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="gEl-6H-q6r"/>
+                        <viewControllerLayoutGuide type="bottom" id="fWN-Py-P8N"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="njc-a2-O5S">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="68v-Uz-Mcq">
+                                <rect key="frame" x="20" y="74" width="560" height="467"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="68v-Uz-Mcq" firstAttribute="leading" secondItem="njc-a2-O5S" secondAttribute="leadingMargin" id="06e-AG-JnL"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="68v-Uz-Mcq" secondAttribute="trailing" id="Xui-Rl-vZ9"/>
+                            <constraint firstItem="fWN-Py-P8N" firstAttribute="top" secondItem="68v-Uz-Mcq" secondAttribute="bottom" constant="10" id="fwO-cQ-c1V"/>
+                            <constraint firstItem="68v-Uz-Mcq" firstAttribute="top" secondItem="gEl-6H-q6r" secondAttribute="bottom" constant="10" id="i8T-rr-sm9"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="68v-Uz-Mcq" id="Iy8-Q0-TWG"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fPm-7F-crC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2662" y="2201"/>
         </scene>
         <!--个人-->
         <scene sceneID="GOE-uW-2j9">

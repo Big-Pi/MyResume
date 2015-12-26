@@ -15,6 +15,7 @@
     archivement.imgName=dict[@"img"];
     return archivement;
 }
+
 +(NSArray *)allArchivement{
     NSMutableArray *array=[NSMutableArray array];
     NSString *path= [[NSBundle mainBundle]pathForResource:@"prize" ofType:@"plist"];
@@ -23,5 +24,9 @@
         [array addObject:[Archivement archivementWithDict:dict]];
     }
     return array;
+}
+
+-(NSString*)imgName_high_resolution{
+    return [self.imgName stringByAppendingString:@"_high"];
 }
 @end

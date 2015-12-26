@@ -14,4 +14,5 @@
 
 +(NSArray*)allArchivement;
 +(instancetype)archivementWithDict:(NSDictionary*)dict;
+-(NSString*)imgName_high_resolution;
 @end
