@@ -7,10 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+@class ColorCollectionCell;
 
 
 @interface CollectionCardViewController : UIViewController
-
+@property (strong,nonatomic) ColorCollectionCell *selectedCell;
 
 @end
 

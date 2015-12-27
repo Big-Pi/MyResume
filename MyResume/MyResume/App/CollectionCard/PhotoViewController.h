@@ -10,5 +10,6 @@
 @class Archivement;
 
 @interface PhotoViewController : UIViewController
+@property (weak, nonatomic) IBOutlet UIImageView *imageView;
 @property (strong,nonatomic) Archivement *archivement;
 @end

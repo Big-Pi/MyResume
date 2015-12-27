@@ -78,6 +78,7 @@
 		0EBF0B231C1830D500C8CE70 /* UIImage+ImageEffects.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EBF0B1A1C1830D500C8CE70 /* UIImage+ImageEffects.m */; };
 		0EBF0B251C1830D500C8CE70 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EBF0B201C1830D500C8CE70 /* AppDelegate.m */; };
 		0EBF0B261C1830D500C8CE70 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EBF0B211C1830D500C8CE70 /* main.m */; };
+		0ED9C6361C2F9A2B007879B2 /* PhotoAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ED9C6351C2F9A2B007879B2 /* PhotoAnimator.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -231,6 +232,8 @@
 		0EBF0B1F1C1830D500C8CE70 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		0EBF0B201C1830D500C8CE70 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		0EBF0B211C1830D500C8CE70 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		0ED9C6341C2F9A2B007879B2 /* PhotoAnimator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoAnimator.h; sourceTree = "<group>"; };
+		0ED9C6351C2F9A2B007879B2 /* PhotoAnimator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoAnimator.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -274,6 +277,8 @@
 				0E22780E1C24579D003E3547 /* prize.plist */,
 				0EBE4C281C2EFD7D008353B5 /* PhotoViewController.h */,
 				0EBE4C291C2EFD7D008353B5 /* PhotoViewController.m */,
+				0ED9C6341C2F9A2B007879B2 /* PhotoAnimator.h */,
+				0ED9C6351C2F9A2B007879B2 /* PhotoAnimator.m */,
 			);
 			path = CollectionCard;
 			sourceTree = "<group>";
@@ -756,6 +761,7 @@
 				0E35A6381C1C7878003921A0 /* AboutMeTableController.m in Sources */,
 				0E6D7E271C1B285100A5F43D /* TimeLineTableViewCell.m in Sources */,
 				0E6D7E551C1B2EA100A5F43D /* SkillProgressViewController.m in Sources */,
+				0ED9C6361C2F9A2B007879B2 /* PhotoAnimator.m in Sources */,
 				0EA7A3251C1D812700829442 /* UIView+ChameleonPrivate.m in Sources */,
 				0EA7A3201C1D812700829442 /* UIColor+Chameleon.m in Sources */,
 				0E35A62D1C1C7760003921A0 /* FAKOcticons.m in Sources */,

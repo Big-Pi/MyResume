@@ -454,7 +454,6 @@
                     </navigationItem>
                     <connections>
                         <outlet property="collectionView" destination="4M9-fy-hCi" id="Qsk-Fy-m90"/>
-                        <segue destination="CQL-Sp-e2F" kind="show" identifier="showPhoto" id="Rv3-NZ-gk8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sar-AD-J2J" sceneMemberID="firstResponder"/>
@@ -464,7 +463,7 @@
         <!--Photo View Controller-->
         <scene sceneID="frH-x1-JLr">
             <objects>
-                <viewController id="CQL-Sp-e2F" customClass="PhotoViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PhotoViewController" id="CQL-Sp-e2F" customClass="PhotoViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="gEl-6H-q6r"/>
                         <viewControllerLayoutGuide type="bottom" id="fWN-Py-P8N"/>
@@ -474,7 +473,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="68v-Uz-Mcq">
-                                <rect key="frame" x="20" y="74" width="560" height="467"/>
+                                <rect key="frame" x="20" y="30" width="560" height="560"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -491,7 +490,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fPm-7F-crC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2662" y="2201"/>
+            <point key="canvasLocation" x="2699" y="2201"/>
         </scene>
         <!--个人-->
         <scene sceneID="GOE-uW-2j9">

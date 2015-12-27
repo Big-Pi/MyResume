@@ -11,7 +11,7 @@
 
 @interface PhotoViewController ()
 
-@property (weak, nonatomic) IBOutlet UIImageView *imageView;
+
 @end
 
 @implementation PhotoViewController
@@ -20,6 +20,9 @@
     [super viewDidLoad];
     UIImage *img=[UIImage imageNamed:[self.archivement imgName_high_resolution]];
     self.imageView.image=img;
+}
+-(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
+    [self.presentingViewController dismissViewControllerAnimated:YES completion:nil];
 }
 
 @end

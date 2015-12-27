@@ -13,12 +13,15 @@
 #import "FontAwsomeImageHelper.h"
 #import "Archivement.h"
 #import "PhotoViewController.h"
+#import "PhotoAnimator.h"
 
-@interface CollectionCardViewController ()<UICollectionViewDataSource,ColorCollectionCellDelegate, SwipableCardCollectionLayoutDelegate>
+@interface CollectionCardViewController ()<UICollectionViewDataSource,ColorCollectionCellDelegate, SwipableCardCollectionLayoutDelegate,UIViewControllerTransitioningDelegate>
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
 @property(nonatomic,strong) NSMutableArray *archivements;
 @property (strong,nonatomic) SwipableCardCollectionLayout *cardLayout;
 @property (assign,nonatomic) CGVector vector;
+@property (strong,nonatomic) PhotoAnimator *animator;
+
 @end
 
 @implementation CollectionCardViewController
@@ -48,10 +51,18 @@
     return _archivements;
 }
 
+-(PhotoAnimator *)animator{
+    if(!_animator){
+        _animator=[[PhotoAnimator alloc]init];
+    }
+    return _animator;
+}
+
 - (IBAction)reloadCards:(UIBarButtonItem *)sender {
     _archivements=nil;
     [self.collectionView reloadData];
 }
+
 
 
 #pragma mark - UICollectionViewDataSource
@@ -80,19 +91,28 @@
 }
 
 -(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
-    
-    [self performSegueWithIdentifier:@"showPhoto" sender:self.archivements[indexPath.row]];
-//    NSLog(@"selected : %ld",(long)indexPath.item);
+    self.selectedCell=(ColorCollectionCell*)[self.collectionView cellForItemAtIndexPath:indexPath];
+    UIStoryboard *sb=[UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    PhotoViewController *photpVC= (PhotoViewController*)[sb instantiateViewControllerWithIdentifier:@"PhotoViewController"];
+    photpVC.archivement=self.archivements[indexPath.row];
+    photpVC.transitioningDelegate=self;
+    UIImageView *selectedImageView= self.selectedCell.archivementImageView;
+    self.animator.originalFrame=[selectedImageView.superview convertRect:selectedImageView.frame toView:nil];
+    [self presentViewController:photpVC animated:YES completion:nil];
 }
 
--(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
-    if([segue.identifier isEqualToString:@"showPhoto"]){
-        PhotoViewController *photoVC=(PhotoViewController*) segue.destinationViewController;
-        if([sender isMemberOfClass:[Archivement class]]){
-            photoVC.archivement=sender;
-        }
-    }
-}
+//-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+//    if([segue.identifier isEqualToString:@"showPhoto"]){
+//        PhotoSegue *photoSegue=(PhotoSegue*)segue;
+//        NSIndexPath *selectedIndexPath= self.collectionView.indexPathsForSelectedItems[0];
+//        ColorCollectionCell *selectedCell= (ColorCollectionCell*)[self.collectionView cellForItemAtIndexPath:selectedIndexPath];
+//        photoSegue.fromFrame=selectedCell.archivementImageView.frame;
+//        PhotoViewController *photoVC=(PhotoViewController*) segue.destinationViewController;
+//        if([sender isMemberOfClass:[Archivement class]]){
+//            photoVC.archivement=sender;
+//        }
+//    }
+//}
 
 -(CGVector)deleteCellVector{
     return self.vector;
@@ -119,6 +139,17 @@
     } completion:^(BOOL finished) {
         
     }];
+}
+
+#pragma mark - UIViewControllerTransitioningDelegate
+-(id<UIViewControllerAnimatedTransitioning>)animationControllerForPresentedController:(UIViewController *)presented presentingController:(UIViewController *)presenting sourceController:(UIViewController *)source{
+    self.animator.presenting=YES;
+    return self.animator;
+}
+
+-(id<UIViewControllerAnimatedTransitioning>)animationControllerForDismissedController:(UIViewController *)dismissed{
+    self.animator.presenting=NO;
+    return self.animator;
 }
 
 @end
