@@ -46,7 +46,12 @@ NSString *const kLocationQuery=@"http://maps.apple.com/?q=%@";
     self.avantar.layer.borderWidth=4;
     self.avantar.layer.borderColor=[UIColor whiteColor].CGColor;
     //
+    #pragma clang diagnostic push
+    #pragma clang diagnostic ignored"-Wdeprecated-declarations"
+    
     NSString *location=[[NSString stringWithFormat:kLocationQuery,@"辽宁省沈阳市"]stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+    
+    #pragma clang diagnostic pop
     [self.locationLabel addLinkToURL:[NSURL URLWithString:location] withRange:[self.locationLabel.text rangeOfString:@"辽宁沈阳"]];
     [self.tinyDoLabel addLinkToURL:[NSURL URLWithString:@"https://github.com/Big-Pi/TinyDo"] withRange:[self.tinyDoLabel.text rangeOfString:@"TinyDo"]];
     [self.constGeneratorLabel addLinkToURL:[NSURL URLWithString:@"https://github.com/Big-Pi/ConstGenerator"] withRange:[self.constGeneratorLabel.text rangeOfString:@"ConstGenerator"]];

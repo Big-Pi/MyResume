@@ -33,7 +33,7 @@
     [self.animCompleteLabels removeAllObjects];
     for (int i=0; i<self.skillLabels.count; i++) {
         UILabel *label=self.skillLabels[i];
-        [UIView animateWithDuration:3.0 animations:^{
+        [UIView animateWithDuration:2.0 animations:^{
             NSInteger offsetX= [self randomOffset];
             NSInteger offsetY= [self randomOffset];
             CGFloat scale=[self randomScale];

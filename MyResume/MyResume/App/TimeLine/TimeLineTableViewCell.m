@@ -24,6 +24,10 @@
 
 @dynamic hideLine;
 
+-(void)prepareForReuse{
+    [super prepareForReuse];
+}
+
 #pragma mark - Getter Setter
 -(BOOL)hideLine{
     return  self.dotLineView.hideLine;

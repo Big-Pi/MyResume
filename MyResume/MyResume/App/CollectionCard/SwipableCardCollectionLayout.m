@@ -28,6 +28,7 @@
 -(CGSize)collectionViewContentSize{
     return [self.delegate collectionViewContentSize:self.collectionView];
 }
+
 -(UICollectionViewLayoutAttributes *)layoutAttributesForItemAtIndexPath:(NSIndexPath *)indexPath{
     
     UICollectionViewLayoutAttributes *attr=[UICollectionViewLayoutAttributes layoutAttributesForCellWithIndexPath:indexPath];

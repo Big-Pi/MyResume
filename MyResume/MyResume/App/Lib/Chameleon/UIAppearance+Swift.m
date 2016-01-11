@@ -15,7 +15,9 @@
     NSUInteger count = containers.count;
     NSAssert(count <= 10, @"The count of containers greater than 10 is not supported.");
     
-
+    #pragma clang diagnostic push
+    #pragma clang diagnostic ignored"-Wdeprecated-declarations"
+    
     return [self appearanceWhenContainedIn:
             count > 0 ? containers[0] : nil,
             count > 1 ? containers[1] : nil,
@@ -28,6 +30,9 @@
             count > 8 ? containers[8] : nil,
             count > 9 ? containers[9] : nil,
             nil];
+    
+    #pragma clang diagnostic pop
+    
 }
 
 @end

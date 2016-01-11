@@ -41,12 +41,12 @@
     self.layer.shadowOpacity=0.3;
     self.layer.masksToBounds=NO;
     //    NSLog(@"%@",NSStringFromCGRect(self.colorView.frame));
-    //不设置这个非常卡。。模拟器
+    //Core Animation 优化
     self.layer.shadowPath=[UIBezierPath bezierPathWithRect:self.bounds].CGPath;
     
-    //把layer渲染成image 据说不卡。。边缘平滑了。。但是非常卡。。模拟器
-        self.layer.shouldRasterize=YES;
-        self.layer.rasterizationScale=[UIScreen mainScreen].scale;
+    //把layer渲染成image 据说不卡。。边缘平滑了。。缓存为图片
+    self.layer.shouldRasterize=YES;
+    self.layer.rasterizationScale=[UIScreen mainScreen].scale;
 }
 
 

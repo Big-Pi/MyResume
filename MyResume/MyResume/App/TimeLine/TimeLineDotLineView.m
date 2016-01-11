@@ -28,7 +28,6 @@
 - (instancetype)initWithCoder:(NSCoder *)coder{
     self = [super initWithCoder:coder];
     if (self) {
-        [self privateInit];
         _dotColor=[UIColor randomColor];
     }
     return self;
@@ -40,7 +39,6 @@
 }
 
 -(void)privateInit{
-//    self.contentMode=UIViewContentModeRedraw;
     self.paddingLeftRightTop=self.bounds.size.width/10.0;
     
     static CGColorRef lineColor;
@@ -55,6 +53,7 @@
     //
     self.lineLayer=[CAShapeLayer layer];
     self.lineLayer.path=self.linePath.CGPath;
+    self.lineLayer.opaque=NO;
     self.lineLayer.fillColor=lineColor;
     [self.layer addSublayer:self.lineLayer];
 }
@@ -83,7 +82,7 @@
 
 -(void)setHideLine:(BOOL)hideLine anim:(BOOL)anim{
     _hideLine=hideLine;
-    if(_hideLine){
+    if(hideLine){
         self.lineLayer.opacity=0.0;
     }else{
         self.lineLayer.opacity=1.0;
@@ -92,9 +91,11 @@
             alphaAnim.fromValue=@0.0;
             alphaAnim.toValue=@1.0;
             alphaAnim.duration=1.0;
+            
             [self.lineLayer addAnimation:alphaAnim forKey:nil];
         }
     }
+    
 }
 
 

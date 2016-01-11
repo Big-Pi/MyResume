@@ -101,19 +101,6 @@
     [self presentViewController:photpVC animated:YES completion:nil];
 }
 
-//-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
-//    if([segue.identifier isEqualToString:@"showPhoto"]){
-//        PhotoSegue *photoSegue=(PhotoSegue*)segue;
-//        NSIndexPath *selectedIndexPath= self.collectionView.indexPathsForSelectedItems[0];
-//        ColorCollectionCell *selectedCell= (ColorCollectionCell*)[self.collectionView cellForItemAtIndexPath:selectedIndexPath];
-//        photoSegue.fromFrame=selectedCell.archivementImageView.frame;
-//        PhotoViewController *photoVC=(PhotoViewController*) segue.destinationViewController;
-//        if([sender isMemberOfClass:[Archivement class]]){
-//            photoVC.archivement=sender;
-//        }
-//    }
-//}
-
 -(CGVector)deleteCellVector{
     return self.vector;
 }

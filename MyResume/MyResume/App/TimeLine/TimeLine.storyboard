@@ -50,7 +50,7 @@
                                     </constraints>
                                 </view>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="TimeLineCell" id="C35-6G-R4W" customClass="TimeLineTableViewCell">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="TimeLineCell" id="C35-6G-R4W" customClass="TimeLineTableViewCell">
                                         <rect key="frame" x="0.0" y="125" width="560" height="166"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="C35-6G-R4W" id="NED-HR-nRP">
@@ -76,7 +76,7 @@
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sie_logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="Sz0-AL-NOz">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Sz0-AL-NOz">
                                                     <rect key="frame" x="166" y="0.0" width="60" height="60"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="60" id="OtP-hu-1Vb"/>
@@ -224,7 +224,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="sie_logo.png" width="110" height="95"/>
         <image name="upArrow" width="50" height="50"/>
     </resources>
 </document>
