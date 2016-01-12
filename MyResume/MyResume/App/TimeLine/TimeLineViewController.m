@@ -7,12 +7,10 @@
 //
 
 #import "TimeLineViewController.h"
-#import "TimeLineDotLineView.h"
 #import "TimeLineTableViewCell.h"
 #import "TimeLineHeaderCell.h"
 #import "AutoShowScrollToTopImg.h"
 #import "Experience.h"
-#import "DateFormatter.h"
 #import "FontAwsomeImageHelper.h"
 
 @interface TimeLineViewController ()<UITableViewDelegate,UITableViewDataSource>
@@ -70,32 +68,35 @@
     [self.visibleHeaders enumerateObjectsUsingBlock:^(UIView*  _Nonnull header, NSUInteger idx, BOOL * _Nonnull stop) {
         header.alpha=0.0;
     }];
-#warning Animation Not work correct when set delay
+    
+    __block NSTimeInterval delay;
+    self.tableView.scrollEnabled=NO;
     //
     [self.visibleCells enumerateObjectsUsingBlock:^(__kindof TimeLineTableViewCell * _Nonnull cell, NSUInteger idx, BOOL * _Nonnull stop) {
         
         NSInteger translateX=cell.frame.size.width*(idx%2==0 ? 1 :-1);
         CGAffineTransform transform=CGAffineTransformMakeTranslation(translateX, 0);
         cell.transform=transform;
-//        NSTimeInterval delay=idx*100;
         [cell setHideLine:YES];
-        [UIView animateWithDuration:1.0 delay:0 options:UIViewAnimationOptionCurveEaseOut animations:^{
+        delay=idx * 0.2;
+        [UIView animateWithDuration:1.0 delay:delay options:UIViewAnimationOptionCurveEaseOut animations:^{
             cell.transform=CGAffineTransformIdentity;
         } completion:^(BOOL finished) {
             [cell setHideLine:NO];
+            if(idx==self.visibleCells.count-1){
+                self.tableView.scrollEnabled=YES;
+            }
         }];
         
     }];
     
     [self.visibleHeaders enumerateObjectsUsingBlock:^(UIView*  _Nonnull header, NSUInteger idx, BOOL * _Nonnull stop) {
-        [UIView animateWithDuration:0.8 delay:1.0 options:UIViewAnimationOptionCurveEaseOut animations:^{
+        [UIView animateWithDuration:0.8 delay:delay+1.0 options:UIViewAnimationOptionCurveEaseOut animations:^{
             header.alpha=1.0;
             self.experienceHeader.alpha=1.0;
         } completion:^(BOOL finished) {
         }];
     }];
-    
-//    [self.tableView snapshotViewAfterScreenUpdates:YES];
     
 }
 
