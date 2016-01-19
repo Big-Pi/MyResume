@@ -41,6 +41,7 @@
     [super viewDidLoad];
     self.tableView.rowHeight=166;
     self.tableView.sectionHeaderHeight=66;
+    //shadow
     self.tableView.layer.shadowOpacity=0.5;
     self.tableView.layer.shadowColor=[UIColor blackColor].CGColor;
     self.tableView.layer.shadowRadius=2;
@@ -60,44 +61,47 @@
     return YES;
 }
 
-
 -(void)viewDidAppear:(BOOL)animated{
     [super viewDidAppear:animated];
-    //prepare From Anim
-    self.experienceHeader.alpha=0.0;
-    [self.visibleHeaders enumerateObjectsUsingBlock:^(UIView*  _Nonnull header, NSUInteger idx, BOOL * _Nonnull stop) {
-        header.alpha=0.0;
-    }];
     
-    __block NSTimeInterval delay;
-    self.tableView.scrollEnabled=NO;
-    //
-    [self.visibleCells enumerateObjectsUsingBlock:^(__kindof TimeLineTableViewCell * _Nonnull cell, NSUInteger idx, BOOL * _Nonnull stop) {
-        
-        NSInteger translateX=cell.frame.size.width*(idx%2==0 ? 1 :-1);
-        CGAffineTransform transform=CGAffineTransformMakeTranslation(translateX, 0);
-        cell.transform=transform;
-        [cell setHideLine:YES];
-        delay=idx * 0.2;
-        [UIView animateWithDuration:1.0 delay:delay options:UIViewAnimationOptionCurveEaseOut animations:^{
-            cell.transform=CGAffineTransformIdentity;
-        } completion:^(BOOL finished) {
-            [cell setHideLine:NO];
-            if(idx==self.visibleCells.count-1){
-                self.tableView.scrollEnabled=YES;
-            }
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        //prepare From Anim
+        //hide all header
+        self.experienceHeader.alpha=0.0;
+        [self.visibleHeaders enumerateObjectsUsingBlock:^(UIView*  _Nonnull header, NSUInteger idx, BOOL * _Nonnull stop) {
+            header.alpha=0.0;
         }];
         
-    }];
-    
-    [self.visibleHeaders enumerateObjectsUsingBlock:^(UIView*  _Nonnull header, NSUInteger idx, BOOL * _Nonnull stop) {
-        [UIView animateWithDuration:0.8 delay:delay+1.0 options:UIViewAnimationOptionCurveEaseOut animations:^{
-            header.alpha=1.0;
-            self.experienceHeader.alpha=1.0;
-        } completion:^(BOOL finished) {
+        __block NSTimeInterval delay;
+        self.tableView.scrollEnabled=NO;
+        //anim all visible cells
+        [self.visibleCells enumerateObjectsUsingBlock:^(__kindof TimeLineTableViewCell * _Nonnull cell, NSUInteger idx, BOOL * _Nonnull stop) {
+            
+            NSInteger translateX=cell.frame.size.width*(idx%2==0 ? 1 :-1);
+            CGAffineTransform transform=CGAffineTransformMakeTranslation(translateX, 0);
+            cell.transform=transform;
+            [cell setHideLine:YES];
+            delay=idx * 0.2;
+            [UIView animateWithDuration:1.0 delay:delay options:UIViewAnimationOptionCurveEaseOut animations:^{
+                cell.transform=CGAffineTransformIdentity;
+            } completion:^(BOOL finished) {
+                [cell setHideLine:NO];
+                if(idx==self.visibleCells.count-1){
+                    self.tableView.scrollEnabled=YES;
+                }
+            }];
+            
         }];
-    }];
-    
+        //show all headers delay
+        [self.visibleHeaders enumerateObjectsUsingBlock:^(UIView*  _Nonnull header, NSUInteger idx, BOOL * _Nonnull stop) {
+            [UIView animateWithDuration:0.8 delay:delay+1.0 options:UIViewAnimationOptionCurveEaseOut animations:^{
+                header.alpha=1.0;
+                self.experienceHeader.alpha=1.0;
+            } completion:^(BOOL finished) {
+            }];
+        }];
+    });
 }
 
 #pragma mark - Getter Setter
@@ -155,7 +159,6 @@
         dict= @{@"0":[FontAwsomeImageHelper graduationCapImage],@"1":[FontAwsomeImageHelper bookImage],@"2":[FontAwsomeImageHelper wrenchImage]};
     }
     return (UIImage*)dict[category];
-    
 }
 
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
@@ -172,6 +175,7 @@
     Experience *firstExp=rowsInSection[0];
     TimeLineHeaderCell *header= [tableView dequeueReusableCellWithIdentifier:@"TimeLineHeaderCell"];
     header.titleLabel.text=firstExp.yearStr;
+
     [self.visibleHeaders addObject:header];
     return header;
 }

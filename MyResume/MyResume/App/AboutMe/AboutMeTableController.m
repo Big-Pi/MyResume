@@ -33,7 +33,6 @@ NSString *const kLocationQuery=@"http://maps.apple.com/?q=%@";
 {
     self = [super initWithCoder:coder];
     if (self) {
-        self.tabBarItem.title=@"个人";
         self.tabBarItem.image=[FontAwsomeImageHelper aboutMeTabbarItemImage];
     }
     return self;

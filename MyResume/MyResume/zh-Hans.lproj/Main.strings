@@ -1,0 +1,78 @@
+
+/* Class = "UILabel"; text = "我"; ObjectID = "0eQ-cg-hoc"; */
+"0eQ-cg-hoc.text" = "我";
+
+/* Class = "UILabel"; text = "● TinyDo - 一个iOS极简风格的ToDo列表"; ObjectID = "1fH-zi-ehP"; */
+"1fH-zi-ehP.text" = "● TinyDo - 一个iOS极简风格的ToDo列表";
+
+/* Class = "UILabel"; text = "● MyResume - 我的 iOS 简历 App"; ObjectID = "1oT-3L-bH0"; */
+"1oT-3L-bH0.text" = "● MyResume - 我的 iOS 简历 App";
+
+/* Class = "UILabel"; text = "BigPi"; ObjectID = "2Za-ck-0Ko"; */
+"2Za-ck-0Ko.text" = "BigPi";
+
+/* Class = "UILabel"; text = "GitHub"; ObjectID = "3Wt-9G-tAF"; */
+"3Wt-9G-tAF.text" = "GitHub";
+
+/* Class = "UITabBarItem"; title = "奖项"; ObjectID = "4YE-kg-RFK"; */
+"4YE-kg-RFK.title" = "奖项";
+
+/* Class = "UITabBarItem"; title = "Item"; ObjectID = "8KQ-Fh-cq4"; */
+"8KQ-Fh-cq4.title" = "Item";
+
+/* Class = "UILabel"; text = "● 有一定的自学能力 (机械系,自学编程)"; ObjectID = "Cx8-uu-vQl"; */
+"Cx8-uu-vQl.text" = "● 有一定的自学能力 (机械系,自学编程)";
+
+/* Class = "UILabel"; text = "● 手机：18512416861 ( 辽宁沈阳 )"; ObjectID = "GkX-pY-UIC"; */
+"GkX-pY-UIC.text" = "● 手机：18512416861 ( 辽宁沈阳 )";
+
+/* Class = "UILabel"; text = "● Email：wangdapishuai@163.com"; ObjectID = "H0D-ni-wmb"; */
+"H0D-ni-wmb.text" = "● Email：wangdapishuai@163.com";
+
+/* Class = "UILabel"; text = "● 王帅 / 男 / 1994"; ObjectID = "HLa-4o-ai4"; */
+"HLa-4o-ai4.text" = "● 王帅 / 男 / 1994";
+
+/* Class = "UILabel"; text = "● 此简历Markdown版"; ObjectID = "JZp-3h-WS4"; */
+"JZp-3h-WS4.text" = "● 此简历Markdown版";
+
+/* Class = "UILabel"; text = "● 二本 / 2012 - 2016 沈阳工程学院-机械系"; ObjectID = "LmF-5i-rCe"; */
+"LmF-5i-rCe.text" = "● 二本 / 2012 - 2016 沈阳工程学院-机械系";
+
+/* Class = "UILabel"; text = "关于我"; ObjectID = "Low-OQ-W7J"; */
+"Low-OQ-W7J.text" = "关于我";
+
+/* Class = "UINavigationItem"; title = "Me"; ObjectID = "N7V-3j-J0l"; */
+"N7V-3j-J0l.title" = "Me";
+
+/* Class = "UITabBarItem"; title = "Item"; ObjectID = "ZSW-a5-waV"; */
+"ZSW-a5-waV.title" = "Item";
+
+/* Class = "UILabel"; text = "联系方式"; ObjectID = "ace-ra-MIS"; */
+"ace-ra-MIS.text" = "联系方式";
+
+/* Class = "UILabel"; text = "● QQ / 微信号：877578973 / wangdapishuai"; ObjectID = "dfl-9X-RBE"; */
+"dfl-9X-RBE.text" = "● QQ / 微信号：877578973 / wangdapishuai";
+
+/* Class = "UILabel"; text = "● 有一定阅读英文文档的能力"; ObjectID = "dgf-tl-PRt"; */
+"dgf-tl-PRt.text" = "● 有一定阅读英文文档的能力";
+
+/* Class = "UITabBarItem"; title = "个人"; ObjectID = "end-ah-QXY"; */
+"end-ah-QXY.title" = "个人";
+
+/* Class = "UILabel"; text = "● 期望：iOS客户端开发 / 北京\n期望城市：北京"; ObjectID = "gMR-ny-jLa"; */
+"gMR-ny-jLa.text" = "● 期望：iOS客户端开发 / 北京\n期望城市：北京";
+
+/* Class = "UILabel"; text = "● 工作经验：null ( 2016应届毕业生 )"; ObjectID = "jUL-WF-YDy"; */
+"jUL-WF-YDy.text" = "● 工作经验：null ( 2016应届毕业生 )";
+
+/* Class = "UILabel"; text = "iOS Developer "; ObjectID = "kmI-Ku-zuZ"; */
+"kmI-Ku-zuZ.text" = "iOS Developer ";
+
+/* Class = "UILabel"; text = "● ConstGenerator - Xcode 生成常量的插件"; ObjectID = "mS5-bj-0Yf"; */
+"mS5-bj-0Yf.text" = "● ConstGenerator - Xcode 生成常量的插件";
+
+/* Class = "UILabel"; text = "● 喜欢 : 知乎 Stack Overflow"; ObjectID = "pPo-0m-vIN"; */
+"pPo-0m-vIN.text" = "● 喜欢 : 知乎 Stack Overflow";
+
+/* Class = "UILabel"; text = "● ZhiHuDaily - 知乎日报 App"; ObjectID = "sau-9E-Uxb"; */
+"sau-9E-Uxb.text" = "● ZhiHuDaily - 知乎日报 App";

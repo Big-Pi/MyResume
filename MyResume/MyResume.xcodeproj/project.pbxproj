@@ -20,7 +20,6 @@
 		0E2BAF551C2971670030F731 /* Archivement.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E2BAF541C2971670030F731 /* Archivement.m */; };
 		0E35A5FB1C1C6A15003921A0 /* FontAwesome.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0E35A5FA1C1C6A14003921A0 /* FontAwesome.ttf */; };
 		0E35A60C1C1C71FA003921A0 /* HandWrittingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E35A6091C1C71FA003921A0 /* HandWrittingViewController.m */; };
-		0E35A60D1C1C71FA003921A0 /* MagicTransitionSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E35A60B1C1C71FA003921A0 /* MagicTransitionSegue.m */; };
 		0E35A6111C1C723C003921A0 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E35A6101C1C723C003921A0 /* MainViewController.m */; };
 		0E35A6281C1C7760003921A0 /* FAKFontAwesome.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E35A6141C1C7760003921A0 /* FAKFontAwesome.m */; };
 		0E35A6291C1C7760003921A0 /* FAKFoundationIcons.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E35A6161C1C7760003921A0 /* FAKFoundationIcons.m */; };
@@ -122,8 +121,6 @@
 		0E35A5FA1C1C6A14003921A0 /* FontAwesome.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = FontAwesome.ttf; sourceTree = "<group>"; };
 		0E35A6081C1C71FA003921A0 /* HandWrittingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HandWrittingViewController.h; sourceTree = "<group>"; };
 		0E35A6091C1C71FA003921A0 /* HandWrittingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HandWrittingViewController.m; sourceTree = "<group>"; };
-		0E35A60A1C1C71FA003921A0 /* MagicTransitionSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MagicTransitionSegue.h; sourceTree = "<group>"; };
-		0E35A60B1C1C71FA003921A0 /* MagicTransitionSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MagicTransitionSegue.m; sourceTree = "<group>"; };
 		0E35A60F1C1C723C003921A0 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
 		0E35A6101C1C723C003921A0 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
 		0E35A6131C1C7760003921A0 /* FAKFontAwesome.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FAKFontAwesome.h; sourceTree = "<group>"; };
@@ -185,6 +182,8 @@
 		0E6D7E501C1B2EA100A5F43D /* SkillView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SkillView.m; sourceTree = "<group>"; };
 		0E91F33F1C2155010069E4E6 /* TTTAttributedLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTTAttributedLabel.h; sourceTree = "<group>"; };
 		0E91F3401C2155010069E4E6 /* TTTAttributedLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTTAttributedLabel.m; sourceTree = "<group>"; };
+		0E93B0771C4E6B7B006C8484 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
+		0E93B0781C4E6B7B006C8484 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
 		0EA7A3001C1D812700829442 /* Chameleon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Chameleon.h; sourceTree = "<group>"; };
 		0EA7A3011C1D812700829442 /* Chameleon_.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Chameleon_.h; sourceTree = "<group>"; };
 		0EA7A3021C1D812700829442 /* Chameleon_.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Chameleon_.m; sourceTree = "<group>"; };
@@ -323,8 +322,6 @@
 			children = (
 				0E35A6081C1C71FA003921A0 /* HandWrittingViewController.h */,
 				0E35A6091C1C71FA003921A0 /* HandWrittingViewController.m */,
-				0E35A60A1C1C71FA003921A0 /* MagicTransitionSegue.h */,
-				0E35A60B1C1C71FA003921A0 /* MagicTransitionSegue.m */,
 			);
 			path = HandWritting;
 			sourceTree = "<group>";
@@ -740,7 +737,6 @@
 				0E35A6111C1C723C003921A0 /* MainViewController.m in Sources */,
 				0E35A6281C1C7760003921A0 /* FAKFontAwesome.m in Sources */,
 				0E6D7E581C1B2EA100A5F43D /* SkillsViewController.m in Sources */,
-				0E35A60D1C1C71FA003921A0 /* MagicTransitionSegue.m in Sources */,
 				0E6D7E231C1B285100A5F43D /* DateFormatter.m in Sources */,
 				0E136B6A1C19EC660070C958 /* ColorCollectionCell.m in Sources */,
 				0EA7A31B1C1D812700829442 /* Chameleon_.m in Sources */,
@@ -810,6 +806,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				0EBF0AE71C18301C00C8CE70 /* Base */,
+				0E93B0771C4E6B7B006C8484 /* zh-Hans */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -818,6 +815,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				0EBF0AEC1C18301C00C8CE70 /* Base */,
+				0E93B0781C4E6B7B006C8484 /* zh-Hans */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";

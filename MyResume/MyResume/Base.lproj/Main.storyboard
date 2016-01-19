@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="K1N-33-99z">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
@@ -20,10 +20,13 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <tabBarItem key="tabBarItem" id="x9w-58-BQl"/>
+                    <connections>
+                        <segue destination="K1N-33-99z" kind="presentation" identifier="showMain" modalPresentationStyle="fullScreen" modalTransitionStyle="flipHorizontal" id="oPn-nS-NUh"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2869" y="1479"/>
+            <point key="canvasLocation" x="-275" y="1225"/>
         </scene>
         <!--TimeLine-->
         <scene sceneID="q7k-7B-sUc">
@@ -75,14 +78,8 @@
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="iOS 开发" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RwV-yO-gVf">
-                                                    <rect key="frame" x="296" y="43" width="55" height="17"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="喜欢解决问题的 iOS Developer " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kmI-Ku-zuZ">
-                                                    <rect key="frame" x="184" y="75" width="283" height="24"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="iOS Developer " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kmI-Ku-zuZ">
+                                                    <rect key="frame" x="184" y="75" width="139" height="24"/>
                                                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
@@ -90,8 +87,6 @@
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="Dxk-bQ-MV4" firstAttribute="top" secondItem="tbu-C0-0iX" secondAttribute="topMargin" id="BdS-zP-KPb"/>
-                                                <constraint firstItem="RwV-yO-gVf" firstAttribute="baseline" secondItem="2Za-ck-0Ko" secondAttribute="baseline" id="Duy-PG-Axt"/>
-                                                <constraint firstItem="RwV-yO-gVf" firstAttribute="leading" secondItem="2Za-ck-0Ko" secondAttribute="trailing" constant="8" id="FaO-ki-WMS"/>
                                                 <constraint firstItem="2Za-ck-0Ko" firstAttribute="centerY" secondItem="tbu-C0-0iX" secondAttribute="centerY" constant="-20" id="Gmx-69-4fS"/>
                                                 <constraint firstItem="kmI-Ku-zuZ" firstAttribute="top" secondItem="2Za-ck-0Ko" secondAttribute="bottom" constant="8" id="kkB-TQ-blI"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="Dxk-bQ-MV4" secondAttribute="bottom" id="lbZ-i0-oGO"/>
@@ -353,7 +348,7 @@
                             <outlet property="delegate" destination="9Ck-cD-qCp" id="Uo2-H5-1J5"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Pi" id="N7V-3j-J0l">
+                    <navigationItem key="navigationItem" title="Me" id="N7V-3j-J0l">
                         <barButtonItem key="rightBarButtonItem" systemItem="compose" id="JlB-Dj-hmC">
                             <connections>
                                 <action selector="sendEmail:" destination="9Ck-cD-qCp" id="7Hx-Pz-yeU"/>
@@ -437,7 +432,7 @@
                             <constraint firstItem="4M9-fy-hCi" firstAttribute="top" secondItem="zXI-4h-OKC" secondAttribute="top" constant="20" id="sFf-qy-qna"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Pi" id="jQn-gy-wLP">
+                    <navigationItem key="navigationItem" id="jQn-gy-wLP">
                         <barButtonItem key="rightBarButtonItem" systemItem="refresh" id="Qjw-wy-RIN">
                             <connections>
                                 <action selector="reloadCards:" destination="ViW-vo-7qD" id="RqF-Fq-F1c"/>

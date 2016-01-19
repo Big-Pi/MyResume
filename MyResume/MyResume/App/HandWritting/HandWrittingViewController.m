@@ -23,15 +23,6 @@
     [self setupPathAnimLayer];
 }
 
--(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
-//    UIImageView *v=[[UIImageView alloc]initWithFrame:[UIScreen mainScreen].bounds];
-//    UIImage *screenShot=[self screenShot];
-//    screenShot=[screenShot applyBlurWithRadius:14 tintColor:[UIColor clearColor] saturationDeltaFactor:1.8 maskImage:nil];
-//    v.image=screenShot;
-//    [self.view addSubview:v];
-//    [self performSegueWithIdentifier:@"show" sender:self];
-}
-
 - (UIImage *)createImageWithColor:(UIColor *)color
 {
     CGRect rect = CGRectMake(0.0f, 0.0f, 1.0f, 1.0f);
@@ -44,33 +35,9 @@
     return theImage;
 }
 
--(UIImage*)screenShot{
-    UIWindow *window= [UIApplication sharedApplication].keyWindow;
-    UIGraphicsBeginImageContext(window.bounds.size);
-    CGContextRef ctx=UIGraphicsGetCurrentContext();
-    [window.layer renderInContext:ctx];
-    UIImage *img=UIGraphicsGetImageFromCurrentImageContext();
-    UIGraphicsEndImageContext();
-    return img;
-}
-
 -(void)setupPathAnimLayer{
-//    UIBezierPath *path= [TextPathHelper pathForText:@"Pi"];
-//    //text path layer
-//    CAShapeLayer *pathLayer = [CAShapeLayer layer];
-//    pathLayer.frame = self.view.bounds;
-//    pathLayer.bounds = CGPathGetBoundingBox(path.CGPath);
-//    //    pathLayer.backgroundColor = [[UIColor yellowColor] CGColor];
-//    pathLayer.geometryFlipped = YES;
-//    pathLayer.path = path.CGPath;
-//    pathLayer.strokeColor = [[UIColor blackColor] CGColor];
-//    pathLayer.fillColor = [UIColor clearColor].CGColor;
-//    pathLayer.lineWidth = 7.0f;
-//    pathLayer.lineJoin = kCALineJoinRound;
-
     
-    self.pathLayer=[TextPathHelper textLayerWithText:@"Pi" frame:self.view.bounds];
-//    self.view.layer.mask=pathLayer;
+    self.pathLayer=[TextPathHelper textLayerWithText:@"BigPi" frame:self.view.bounds];
     [self.view.layer addSublayer:self.pathLayer];
     //pen layer
     UIImage *penImage = [UIImage imageNamed:@"pen"];
@@ -86,14 +53,13 @@
     [self startAnimation];
 }
 
-
 - (void) startAnimation
 {
     [self.pathLayer removeAllAnimations];
     [self.penLayer removeAllAnimations];
     
     self.penLayer.hidden = NO;
-    NSInteger duration=3.0;
+    NSInteger duration=5.0;
     
     CABasicAnimation *pathAnimation = [CABasicAnimation animationWithKeyPath:@"strokeEnd"];
     pathAnimation.duration = duration;
@@ -111,7 +77,7 @@
 
 -(void)animationDidStop:(CAAnimation *)anim finished:(BOOL)flag{
     self.penLayer.hidden=YES;
-    [self performSegueWithIdentifier:@"showCollectionCards" sender:self];
+    [self performSegueWithIdentifier:@"showMain" sender:self];
 }
 
 @end

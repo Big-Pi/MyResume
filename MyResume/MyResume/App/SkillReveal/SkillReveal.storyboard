@@ -116,7 +116,7 @@
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="xY1-78-1Fm" secondAttribute="bottom" id="rNf-zm-nrx"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Pi" id="Hr4-dt-zO3"/>
+                    <navigationItem key="navigationItem" title="Pi" prompt="Skill" id="Hr4-dt-zO3"/>
                     <connections>
                         <outlet property="skillView" destination="xY1-78-1Fm" id="lST-eE-yIf"/>
                         <segue destination="weQ-cl-79G" kind="show" identifier="showSkillList" id="W7R-JY-kKB"/>

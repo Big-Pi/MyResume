@@ -71,7 +71,7 @@
 			<key>time</key>
 			<string>2013.11</string>
 			<key>title</key>
-			<string>看传智播客的视频学习java基础,了解什么是面向对象</string>
+			<string>学习java基础,了解什么是面向对象</string>
 			<key>content</key>
 			<string></string>
 			<key>img</key>
@@ -97,7 +97,7 @@
 			<key>time</key>
 			<string>2014.1</string>
 			<key>title</key>
-			<string>看传智播客视频学习java web 基础,熟悉前端知识,了解后端知识</string>
+			<string>学习java web 基础,熟悉前端知识,了解后端知识</string>
 			<key>content</key>
 			<string></string>
 			<key>img</key>
@@ -121,7 +121,7 @@
 			<key>time</key>
 			<string>2014.6</string>
 			<key>title</key>
-			<string>看传智播客的Android视频,入门Android开发</string>
+			<string>入门Android开发</string>
 			<key>content</key>
 			<string></string>
 			<key>img</key>
