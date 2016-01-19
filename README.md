@@ -9,6 +9,8 @@ iPad or iPad Simulator
 
 ---
 
+#####预览图片正在加载中 ......  
+ 
 ![Loading Preview ......](./preview.gif)
 
 ---
