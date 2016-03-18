@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="NLR-sH-1N2">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="NLR-sH-1N2">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -116,7 +116,7 @@
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="xY1-78-1Fm" secondAttribute="bottom" id="rNf-zm-nrx"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Pi" prompt="Skill" id="Hr4-dt-zO3"/>
+                    <navigationItem key="navigationItem" title="Skill" id="Hr4-dt-zO3"/>
                     <connections>
                         <outlet property="skillView" destination="xY1-78-1Fm" id="lST-eE-yIf"/>
                         <segue destination="weQ-cl-79G" kind="show" identifier="showSkillList" id="W7R-JY-kKB"/>

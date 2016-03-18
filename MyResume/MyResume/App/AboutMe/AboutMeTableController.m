@@ -68,8 +68,8 @@ NSString *const kLocationQuery=@"http://maps.apple.com/?q=%@";
     [self.leanCloudLabel addLinkToURL:[NSURL URLWithString:@"https://github.com/Big-Pi/PiChat"] withRange:[self.leanCloudLabel.text rangeOfString:@"PiChat"]];
     [self.SYNULabel addLinkToURL:[NSURL URLWithString:@"https://github.com/Big-Pi/GPAQuery"] withRange:[self.SYNULabel.text rangeOfString:@"SYNU 绩点助手"]];
     //Blog
-    [self.bigpiLabel addLinkToURL:[NSURL URLWithString:@"http://bigpi.me"] withRange:[self.SYNULabel.text rangeOfString:@"BigPi.me"]];
-    [self.jianshuLabel addLinkToURL:[NSURL URLWithString:@"http://www.jianshu.com/users/192cd7521ac8/latest_articles"] withRange:[self.SYNULabel.text rangeOfString:@"简书"]];
+    [self.bigpiLabel addLinkToURL:[NSURL URLWithString:@"http://bigpi.me"] withRange:[self.bigpiLabel.text rangeOfString:@"BigPi.me"]];
+    [self.jianshuLabel addLinkToURL:[NSURL URLWithString:@"http://www.jianshu.com/users/192cd7521ac8/latest_articles"] withRange:[self.jianshuLabel.text rangeOfString:@"简书"]];
     
     
 }
