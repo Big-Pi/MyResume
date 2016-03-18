@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
@@ -53,7 +53,7 @@
             <objects>
                 <tableViewController id="9Ck-cD-qCp" userLabel="AboutMeTableController" customClass="AboutMeTableController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="SdI-Ls-CY2">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="1000"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="1300"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <sections>
@@ -78,8 +78,8 @@
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="iOS Developer " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kmI-Ku-zuZ">
-                                                    <rect key="frame" x="184" y="75" width="139" height="24"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="王大屁帅" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kmI-Ku-zuZ">
+                                                    <rect key="frame" x="184" y="75" width="80" height="24"/>
                                                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
@@ -97,11 +97,61 @@
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.91764705882352937" green="0.91764705882352937" blue="0.91764705882352937" alpha="1" colorSpace="calibratedRGB"/>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="190" id="P4P-MP-ZIc">
-                                        <rect key="frame" x="0.0" y="184" width="600" height="190"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="153" id="rRo-Q6-saq">
+                                        <rect key="frame" x="0.0" y="184" width="600" height="153"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="rRo-Q6-saq" id="qkQ-3p-Lkh">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="152"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="● 王帅 / 男 / 1994" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HLa-4o-ai4">
+                                                    <rect key="frame" x="58" y="52" width="143" height="22"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                                                    <color key="textColor" red="0.47843137254901963" green="0.47843137254901963" blue="0.47843137254901963" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="● 本科 / 2012 - 2016 沈阳工程学院-机械系( 2016应届毕业生 )" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LmF-5i-rCe" customClass="TTTAttributedLabel">
+                                                    <rect key="frame" x="58" y="82" width="497" height="22"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                                                    <color key="textColor" red="0.40392156862745099" green="0.40392156862745099" blue="0.40392156862745099" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                    <connections>
+                                                        <outlet property="delegate" destination="9Ck-cD-qCp" id="pLC-7l-LsN"/>
+                                                    </connections>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="关于我" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Low-OQ-W7J">
+                                                    <rect key="frame" x="58" y="8" width="90" height="36"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="30"/>
+                                                    <color key="textColor" red="0.28627450980392155" green="0.31372549019607843" blue="0.35294117647058826" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gMR-ny-jLa">
+                                                    <rect key="frame" x="58" y="112" width="241" height="22"/>
+                                                    <string key="text">● 期望：iOS客户端开发 / 北京
+期望城市：北京</string>
+                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                                                    <color key="textColor" red="0.40392156862745099" green="0.40392156862745099" blue="0.40392156862745099" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="gMR-ny-jLa" firstAttribute="leading" secondItem="LmF-5i-rCe" secondAttribute="leading" id="3iF-Uu-hLZ"/>
+                                                <constraint firstItem="LmF-5i-rCe" firstAttribute="top" secondItem="HLa-4o-ai4" secondAttribute="bottom" constant="8" id="9m0-L1-mdl"/>
+                                                <constraint firstItem="HLa-4o-ai4" firstAttribute="top" secondItem="Low-OQ-W7J" secondAttribute="bottom" constant="8" id="LCs-Sp-4f5"/>
+                                                <constraint firstItem="Low-OQ-W7J" firstAttribute="leading" secondItem="qkQ-3p-Lkh" secondAttribute="leadingMargin" constant="50" id="Og7-Vf-c13"/>
+                                                <constraint firstItem="HLa-4o-ai4" firstAttribute="leading" secondItem="Low-OQ-W7J" secondAttribute="leading" id="U38-2p-gXH"/>
+                                                <constraint firstItem="Low-OQ-W7J" firstAttribute="top" secondItem="qkQ-3p-Lkh" secondAttribute="topMargin" id="gaf-dZ-NgB"/>
+                                                <constraint firstItem="LmF-5i-rCe" firstAttribute="leading" secondItem="HLa-4o-ai4" secondAttribute="leading" id="mxK-BX-uzI"/>
+                                                <constraint firstItem="gMR-ny-jLa" firstAttribute="top" secondItem="LmF-5i-rCe" secondAttribute="bottom" constant="8" id="rkw-sz-Our"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.89803921568627454" green="0.89803921568627454" blue="0.89803921568627454" alpha="1" colorSpace="calibratedRGB"/>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="155" id="P4P-MP-ZIc">
+                                        <rect key="frame" x="0.0" y="337" width="600" height="155"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="P4P-MP-ZIc" id="xP2-wH-3Wd">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="189"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="154"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="我" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0eQ-cg-hoc">
@@ -142,72 +192,113 @@
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.89803921568627454" green="0.89803921568627454" blue="0.89803921568627454" alpha="1" colorSpace="calibratedRGB"/>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="179" id="rRo-Q6-saq">
-                                        <rect key="frame" x="0.0" y="374" width="600" height="179"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="298" id="gXr-I9-2DS">
+                                        <rect key="frame" x="0.0" y="492" width="600" height="298"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="rRo-Q6-saq" id="qkQ-3p-Lkh">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="178"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="gXr-I9-2DS" id="YwQ-uZ-hq8">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="297"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gMR-ny-jLa">
-                                                    <rect key="frame" x="58" y="142" width="241" height="22"/>
-                                                    <string key="text">● 期望：iOS客户端开发 / 北京
-期望城市：北京</string>
-                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
-                                                    <color key="textColor" red="0.40392156862745099" green="0.40392156862745099" blue="0.40392156862745099" alpha="1" colorSpace="calibratedRGB"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GitHub" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Wt-9G-tAF">
+                                                    <rect key="frame" x="58" y="8" width="96" height="36"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="30"/>
+                                                    <color key="textColor" red="0.28627450980000002" green="0.31372549020000001" blue="0.35294117650000001" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="● 王帅 / 男 / 1994" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HLa-4o-ai4">
-                                                    <rect key="frame" x="58" y="52" width="143" height="22"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="● TinyDo - 一个iOS极简风格的ToDo列表" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1fH-zi-ehP" customClass="TTTAttributedLabel">
+                                                    <rect key="frame" x="58" y="112" width="330" height="22"/>
                                                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
-                                                    <color key="textColor" red="0.47843137254901963" green="0.47843137254901963" blue="0.47843137254901963" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="● 二本 / 2012 - 2016 沈阳工程学院-机械系" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LmF-5i-rCe" customClass="TTTAttributedLabel">
-                                                    <rect key="frame" x="58" y="82" width="343" height="22"/>
-                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
-                                                    <color key="textColor" red="0.40392156862745099" green="0.40392156862745099" blue="0.40392156862745099" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="textColor" red="0.47843137250000001" green="0.47843137250000001" blue="0.47843137250000001" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                     <connections>
-                                                        <outlet property="delegate" destination="9Ck-cD-qCp" id="pLC-7l-LsN"/>
+                                                        <outlet property="delegate" destination="9Ck-cD-qCp" id="Gml-RE-Rmm"/>
                                                     </connections>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="● 工作经验：null ( 2016应届毕业生 )" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jUL-WF-YDy">
-                                                    <rect key="frame" x="58" y="112" width="295" height="22"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="● MyResume - 我的 iOS 简历 App" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1oT-3L-bH0" customClass="TTTAttributedLabel">
+                                                    <rect key="frame" x="58" y="142" width="276" height="22"/>
                                                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
-                                                    <color key="textColor" red="0.40392156862745099" green="0.40392156862745099" blue="0.40392156862745099" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="textColor" red="0.47843137250000001" green="0.47843137250000001" blue="0.47843137250000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                    <connections>
+                                                        <outlet property="delegate" destination="9Ck-cD-qCp" id="h3l-RZ-w2E"/>
+                                                    </connections>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="● ConstGenerator - Xcode 生成常量的插件" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mS5-bj-0Yf" customClass="TTTAttributedLabel">
+                                                    <rect key="frame" x="58" y="202" width="353" height="22"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                                                    <color key="textColor" red="0.47843137250000001" green="0.47843137250000001" blue="0.47843137250000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                    <connections>
+                                                        <outlet property="delegate" destination="9Ck-cD-qCp" id="gc4-gL-Aj3"/>
+                                                    </connections>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="● 此简历Markdown版" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JZp-3h-WS4" customClass="TTTAttributedLabel">
+                                                    <rect key="frame" x="58" y="232" width="177" height="22"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                                                    <color key="textColor" red="0.47843137250000001" green="0.47843137250000001" blue="0.47843137250000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                    <connections>
+                                                        <outlet property="delegate" destination="9Ck-cD-qCp" id="KHj-xR-36M"/>
+                                                    </connections>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="● ZhiHuDaily - 知乎日报 App" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sau-9E-Uxb" customClass="TTTAttributedLabel">
+                                                    <rect key="frame" x="58" y="172" width="236" height="22"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                                                    <color key="textColor" red="0.47843137250000001" green="0.47843137250000001" blue="0.47843137250000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                    <connections>
+                                                        <outlet property="delegate" destination="9Ck-cD-qCp" id="jon-HT-PQa"/>
+                                                    </connections>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="● SYNU 绩点助手- 小工具 App, 查看学生信息, 图表展示成绩" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="40g-TN-8no" customClass="TTTAttributedLabel">
+                                                    <rect key="frame" x="58" y="82" width="534" height="22"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                                                    <color key="textColor" red="0.47843137254901957" green="0.47843137254901957" blue="0.47843137254901957" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="关于我" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Low-OQ-W7J">
-                                                    <rect key="frame" x="58" y="8" width="90" height="36"/>
-                                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="30"/>
-                                                    <color key="textColor" red="0.28627450980392155" green="0.31372549019607843" blue="0.35294117647058826" alpha="1" colorSpace="calibratedRGB"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="● PiChat - 基于 Leancloud 制作的即时聊天 App" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8EV-DQ-b13" customClass="TTTAttributedLabel">
+                                                    <rect key="frame" x="58" y="52" width="386" height="22"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                                                    <color key="textColor" red="0.47843137254901957" green="0.47843137254901957" blue="0.47843137254901957" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="jUL-WF-YDy" firstAttribute="top" secondItem="LmF-5i-rCe" secondAttribute="bottom" constant="8" id="4ce-ES-DuM"/>
-                                                <constraint firstItem="LmF-5i-rCe" firstAttribute="top" secondItem="HLa-4o-ai4" secondAttribute="bottom" constant="8" id="9m0-L1-mdl"/>
-                                                <constraint firstItem="HLa-4o-ai4" firstAttribute="top" secondItem="Low-OQ-W7J" secondAttribute="bottom" constant="8" id="LCs-Sp-4f5"/>
-                                                <constraint firstItem="jUL-WF-YDy" firstAttribute="leading" secondItem="LmF-5i-rCe" secondAttribute="leading" id="Lz7-DG-uhV"/>
-                                                <constraint firstItem="gMR-ny-jLa" firstAttribute="top" secondItem="jUL-WF-YDy" secondAttribute="bottom" constant="8" id="MpW-N1-Sx2"/>
-                                                <constraint firstItem="Low-OQ-W7J" firstAttribute="leading" secondItem="qkQ-3p-Lkh" secondAttribute="leadingMargin" constant="50" id="Og7-Vf-c13"/>
-                                                <constraint firstAttribute="topMargin" secondItem="Low-OQ-W7J" secondAttribute="top" id="Sfy-3a-F1H"/>
-                                                <constraint firstItem="HLa-4o-ai4" firstAttribute="leading" secondItem="Low-OQ-W7J" secondAttribute="leading" id="U38-2p-gXH"/>
-                                                <constraint firstItem="gMR-ny-jLa" firstAttribute="leading" secondItem="jUL-WF-YDy" secondAttribute="leading" id="eKL-Kt-hps"/>
-                                                <constraint firstItem="Low-OQ-W7J" firstAttribute="top" secondItem="qkQ-3p-Lkh" secondAttribute="topMargin" id="gaf-dZ-NgB"/>
-                                                <constraint firstItem="LmF-5i-rCe" firstAttribute="leading" secondItem="HLa-4o-ai4" secondAttribute="leading" id="mxK-BX-uzI"/>
+                                                <constraint firstItem="8EV-DQ-b13" firstAttribute="leading" secondItem="3Wt-9G-tAF" secondAttribute="leading" id="2F0-72-lCE"/>
+                                                <constraint firstItem="3Wt-9G-tAF" firstAttribute="leading" secondItem="YwQ-uZ-hq8" secondAttribute="leadingMargin" constant="50" id="3oD-2n-GB8"/>
+                                                <constraint firstItem="3Wt-9G-tAF" firstAttribute="top" secondItem="YwQ-uZ-hq8" secondAttribute="topMargin" id="7aj-Rs-or8"/>
+                                                <constraint firstItem="1oT-3L-bH0" firstAttribute="leading" secondItem="1fH-zi-ehP" secondAttribute="leading" id="7xg-m6-40I"/>
+                                                <constraint firstItem="1oT-3L-bH0" firstAttribute="top" secondItem="1fH-zi-ehP" secondAttribute="bottom" constant="8" id="8sX-za-Mqe"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="40g-TN-8no" secondAttribute="trailing" id="BAj-kp-r5G"/>
+                                                <constraint firstItem="40g-TN-8no" firstAttribute="top" secondItem="8EV-DQ-b13" secondAttribute="bottom" constant="8" id="BQf-aN-Bdo"/>
+                                                <constraint firstItem="mS5-bj-0Yf" firstAttribute="top" secondItem="sau-9E-Uxb" secondAttribute="bottom" constant="8" id="F6h-qn-YdL"/>
+                                                <constraint firstItem="mS5-bj-0Yf" firstAttribute="leading" secondItem="sau-9E-Uxb" secondAttribute="leading" id="OqF-Rh-5EA"/>
+                                                <constraint firstItem="sau-9E-Uxb" firstAttribute="leading" secondItem="1oT-3L-bH0" secondAttribute="leading" id="PEV-qe-T1K"/>
+                                                <constraint firstItem="JZp-3h-WS4" firstAttribute="leading" secondItem="mS5-bj-0Yf" secondAttribute="leading" id="TNx-1d-XN4"/>
+                                                <constraint firstItem="40g-TN-8no" firstAttribute="leading" secondItem="JZp-3h-WS4" secondAttribute="leading" id="Yil-ih-idR"/>
+                                                <constraint firstItem="JZp-3h-WS4" firstAttribute="leading" secondItem="mS5-bj-0Yf" secondAttribute="leading" id="ZNY-IB-vFt"/>
+                                                <constraint firstItem="1fH-zi-ehP" firstAttribute="top" secondItem="3Wt-9G-tAF" secondAttribute="bottom" constant="8" id="fEk-f6-Fmr"/>
+                                                <constraint firstItem="JZp-3h-WS4" firstAttribute="top" secondItem="mS5-bj-0Yf" secondAttribute="bottom" constant="8" id="fh3-c7-h0D"/>
+                                                <constraint firstItem="mS5-bj-0Yf" firstAttribute="top" secondItem="1fH-zi-ehP" secondAttribute="bottom" constant="8" id="h3y-Pi-72I"/>
+                                                <constraint firstItem="1fH-zi-ehP" firstAttribute="leading" secondItem="3Wt-9G-tAF" secondAttribute="leading" id="lBE-hR-zcS"/>
+                                                <constraint firstItem="8EV-DQ-b13" firstAttribute="top" secondItem="3Wt-9G-tAF" secondAttribute="bottom" constant="8" id="nU8-jC-02i"/>
+                                                <constraint firstItem="sau-9E-Uxb" firstAttribute="top" secondItem="1oT-3L-bH0" secondAttribute="bottom" constant="8" id="pWk-wp-x2I"/>
+                                                <constraint firstItem="mS5-bj-0Yf" firstAttribute="leading" secondItem="1fH-zi-ehP" secondAttribute="leading" id="ulC-bu-Nck"/>
+                                                <constraint firstItem="1fH-zi-ehP" firstAttribute="top" secondItem="40g-TN-8no" secondAttribute="bottom" constant="8" id="vw4-xH-5J6"/>
                                             </constraints>
                                             <variation key="default">
                                                 <mask key="constraints">
-                                                    <exclude reference="Sfy-3a-F1H"/>
+                                                    <exclude reference="fEk-f6-Fmr"/>
+                                                    <exclude reference="h3y-Pi-72I"/>
+                                                    <exclude reference="ulC-bu-Nck"/>
+                                                    <exclude reference="ZNY-IB-vFt"/>
                                                 </mask>
                                             </variation>
                                         </tableViewCellContentView>
-                                        <color key="backgroundColor" red="0.89803921568627454" green="0.89803921568627454" blue="0.89803921568627454" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="backgroundColor" red="0.8980392157" green="0.8980392157" blue="0.8980392157" alpha="1" colorSpace="calibratedRGB"/>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="151" id="GSC-jg-rLl">
-                                        <rect key="frame" x="0.0" y="553" width="600" height="151"/>
+                                        <rect key="frame" x="0.0" y="790" width="600" height="151"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="GSC-jg-rLl" id="tTA-Hs-kb0">
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="150"/>
@@ -254,89 +345,43 @@
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.8980392157" green="0.8980392157" blue="0.8980392157" alpha="1" colorSpace="calibratedRGB"/>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="231" id="gXr-I9-2DS">
-                                        <rect key="frame" x="0.0" y="704" width="600" height="231"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="151" id="EGO-M1-fAl">
+                                        <rect key="frame" x="0.0" y="941" width="600" height="151"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="gXr-I9-2DS" id="YwQ-uZ-hq8">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="230"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="EGO-M1-fAl" id="0Lc-yo-blu">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="150"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GitHub" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Wt-9G-tAF">
-                                                    <rect key="frame" x="58" y="8" width="96" height="36"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="博客" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SFb-4i-Z6v">
+                                                    <rect key="frame" x="58" y="8" width="60" height="36"/>
                                                     <fontDescription key="fontDescription" type="system" weight="medium" pointSize="30"/>
                                                     <color key="textColor" red="0.28627450980000002" green="0.31372549020000001" blue="0.35294117650000001" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="● TinyDo - 一个iOS极简风格的ToDo列表" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1fH-zi-ehP" customClass="TTTAttributedLabel">
-                                                    <rect key="frame" x="58" y="52" width="330" height="22"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="● BigPi.me" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vO1-bz-CvL" customClass="TTTAttributedLabel">
+                                                    <rect key="frame" x="58" y="52" width="91" height="22"/>
                                                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
                                                     <color key="textColor" red="0.47843137250000001" green="0.47843137250000001" blue="0.47843137250000001" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                     <connections>
-                                                        <outlet property="delegate" destination="9Ck-cD-qCp" id="Gml-RE-Rmm"/>
+                                                        <outlet property="delegate" destination="9Ck-cD-qCp" id="VCn-Yi-u71"/>
                                                     </connections>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="● MyResume - 我的 iOS 简历 App" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1oT-3L-bH0" customClass="TTTAttributedLabel">
-                                                    <rect key="frame" x="58" y="82" width="276" height="22"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="● 简书" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NOO-X3-ekz" customClass="TTTAttributedLabel">
+                                                    <rect key="frame" x="58" y="82" width="52" height="22"/>
                                                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
                                                     <color key="textColor" red="0.47843137250000001" green="0.47843137250000001" blue="0.47843137250000001" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
-                                                    <connections>
-                                                        <outlet property="delegate" destination="9Ck-cD-qCp" id="h3l-RZ-w2E"/>
-                                                    </connections>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="● ConstGenerator - Xcode 生成常量的插件" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mS5-bj-0Yf" customClass="TTTAttributedLabel">
-                                                    <rect key="frame" x="58" y="142" width="353" height="22"/>
-                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
-                                                    <color key="textColor" red="0.47843137250000001" green="0.47843137250000001" blue="0.47843137250000001" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                    <connections>
-                                                        <outlet property="delegate" destination="9Ck-cD-qCp" id="gc4-gL-Aj3"/>
-                                                    </connections>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="● 此简历Markdown版" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JZp-3h-WS4" customClass="TTTAttributedLabel">
-                                                    <rect key="frame" x="58" y="172" width="177" height="22"/>
-                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
-                                                    <color key="textColor" red="0.47843137250000001" green="0.47843137250000001" blue="0.47843137250000001" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                    <connections>
-                                                        <outlet property="delegate" destination="9Ck-cD-qCp" id="KHj-xR-36M"/>
-                                                    </connections>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="● ZhiHuDaily - 知乎日报 App" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sau-9E-Uxb" customClass="TTTAttributedLabel">
-                                                    <rect key="frame" x="58" y="112" width="236" height="22"/>
-                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
-                                                    <color key="textColor" red="0.47843137250000001" green="0.47843137250000001" blue="0.47843137250000001" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                    <connections>
-                                                        <outlet property="delegate" destination="9Ck-cD-qCp" id="jon-HT-PQa"/>
-                                                    </connections>
                                                 </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="3Wt-9G-tAF" firstAttribute="leading" secondItem="YwQ-uZ-hq8" secondAttribute="leadingMargin" constant="50" id="3oD-2n-GB8"/>
-                                                <constraint firstItem="3Wt-9G-tAF" firstAttribute="top" secondItem="YwQ-uZ-hq8" secondAttribute="topMargin" id="7aj-Rs-or8"/>
-                                                <constraint firstItem="1oT-3L-bH0" firstAttribute="leading" secondItem="1fH-zi-ehP" secondAttribute="leading" id="7xg-m6-40I"/>
-                                                <constraint firstItem="1oT-3L-bH0" firstAttribute="top" secondItem="1fH-zi-ehP" secondAttribute="bottom" constant="8" id="8sX-za-Mqe"/>
-                                                <constraint firstItem="mS5-bj-0Yf" firstAttribute="top" secondItem="sau-9E-Uxb" secondAttribute="bottom" constant="8" id="F6h-qn-YdL"/>
-                                                <constraint firstItem="mS5-bj-0Yf" firstAttribute="leading" secondItem="sau-9E-Uxb" secondAttribute="leading" id="OqF-Rh-5EA"/>
-                                                <constraint firstItem="sau-9E-Uxb" firstAttribute="leading" secondItem="1oT-3L-bH0" secondAttribute="leading" id="PEV-qe-T1K"/>
-                                                <constraint firstItem="JZp-3h-WS4" firstAttribute="leading" secondItem="mS5-bj-0Yf" secondAttribute="leading" id="TNx-1d-XN4"/>
-                                                <constraint firstItem="JZp-3h-WS4" firstAttribute="leading" secondItem="mS5-bj-0Yf" secondAttribute="leading" id="ZNY-IB-vFt"/>
-                                                <constraint firstItem="1fH-zi-ehP" firstAttribute="top" secondItem="3Wt-9G-tAF" secondAttribute="bottom" constant="8" id="fEk-f6-Fmr"/>
-                                                <constraint firstItem="JZp-3h-WS4" firstAttribute="top" secondItem="mS5-bj-0Yf" secondAttribute="bottom" constant="8" id="fh3-c7-h0D"/>
-                                                <constraint firstItem="mS5-bj-0Yf" firstAttribute="top" secondItem="1fH-zi-ehP" secondAttribute="bottom" constant="8" id="h3y-Pi-72I"/>
-                                                <constraint firstItem="1fH-zi-ehP" firstAttribute="leading" secondItem="3Wt-9G-tAF" secondAttribute="leading" id="lBE-hR-zcS"/>
-                                                <constraint firstItem="sau-9E-Uxb" firstAttribute="top" secondItem="1oT-3L-bH0" secondAttribute="bottom" constant="8" id="pWk-wp-x2I"/>
-                                                <constraint firstItem="mS5-bj-0Yf" firstAttribute="leading" secondItem="1fH-zi-ehP" secondAttribute="leading" id="ulC-bu-Nck"/>
+                                                <constraint firstItem="SFb-4i-Z6v" firstAttribute="top" secondItem="0Lc-yo-blu" secondAttribute="topMargin" id="QbE-tO-wsK"/>
+                                                <constraint firstItem="NOO-X3-ekz" firstAttribute="top" secondItem="vO1-bz-CvL" secondAttribute="bottom" constant="8" id="SpV-Ef-BZ0"/>
+                                                <constraint firstItem="SFb-4i-Z6v" firstAttribute="leading" secondItem="0Lc-yo-blu" secondAttribute="leadingMargin" constant="50" id="atz-AT-Ox0"/>
+                                                <constraint firstItem="vO1-bz-CvL" firstAttribute="leading" secondItem="SFb-4i-Z6v" secondAttribute="leading" id="kQv-3l-icD"/>
+                                                <constraint firstItem="NOO-X3-ekz" firstAttribute="leading" secondItem="vO1-bz-CvL" secondAttribute="leading" id="wx2-Oi-Nvc"/>
+                                                <constraint firstItem="vO1-bz-CvL" firstAttribute="top" secondItem="SFb-4i-Z6v" secondAttribute="bottom" constant="8" id="zJa-UF-NAI"/>
                                             </constraints>
-                                            <variation key="default">
-                                                <mask key="constraints">
-                                                    <exclude reference="h3y-Pi-72I"/>
-                                                    <exclude reference="ulC-bu-Nck"/>
-                                                    <exclude reference="ZNY-IB-vFt"/>
-                                                </mask>
-                                            </variation>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.8980392157" green="0.8980392157" blue="0.8980392157" alpha="1" colorSpace="calibratedRGB"/>
                                     </tableViewCell>
@@ -356,10 +401,14 @@
                         </barButtonItem>
                     </navigationItem>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-                    <size key="freeformSize" width="600" height="1000"/>
+                    <size key="freeformSize" width="600" height="1300"/>
                     <connections>
+                        <outlet property="SYNULabel" destination="40g-TN-8no" id="3Yh-uu-taU"/>
                         <outlet property="avantar" destination="Dxk-bQ-MV4" id="b4P-hK-2XK"/>
+                        <outlet property="bigpiLabel" destination="vO1-bz-CvL" id="tk5-kz-VeI"/>
                         <outlet property="constGeneratorLabel" destination="mS5-bj-0Yf" id="5OE-Lf-y01"/>
+                        <outlet property="jianshuLabel" destination="NOO-X3-ekz" id="qcd-ch-BZL"/>
+                        <outlet property="leanCloudLabel" destination="8EV-DQ-b13" id="NIG-Kn-Ohi"/>
                         <outlet property="locationLabel" destination="GkX-pY-UIC" id="akf-bj-phe"/>
                         <outlet property="myResumeLabel" destination="1oT-3L-bH0" id="cXQ-Wj-AY9"/>
                         <outlet property="resumeMarkDownLabel" destination="JZp-3h-WS4" id="LXz-83-93X"/>

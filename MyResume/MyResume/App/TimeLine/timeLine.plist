@@ -241,6 +241,18 @@
 	<array>
 		<dict>
 			<key>category</key>
+			<string>1</string>
+			<key>time</key>
+			<string>2016.2</string>
+			<key>title</key>
+			<string>基于 Leancloud 开发即时聊天应用 , 集成Leancloud 数据存储 , 即时通信模块</string>
+			<key>content</key>
+			<string></string>
+			<key>img</key>
+			<string></string>
+		</dict>
+		<dict>
+			<key>category</key>
 			<string>0</string>
 			<key>time</key>
 			<string>2016.7</string>

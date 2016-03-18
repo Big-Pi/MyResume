@@ -24,6 +24,12 @@ NSString *const kLocationQuery=@"http://maps.apple.com/?q=%@";
 @property (weak, nonatomic) IBOutlet TTTAttributedLabel *schoolLabel;
 @property (weak, nonatomic) IBOutlet TTTAttributedLabel *myResumeLabel;
 @property (weak, nonatomic) IBOutlet TTTAttributedLabel *zhiHuDailyLabel;
+@property (weak, nonatomic) IBOutlet TTTAttributedLabel *leanCloudLabel;
+@property (weak, nonatomic) IBOutlet TTTAttributedLabel *SYNULabel;
+
+//blog
+@property (weak, nonatomic) IBOutlet TTTAttributedLabel *jianshuLabel;
+@property (weak, nonatomic) IBOutlet TTTAttributedLabel *bigpiLabel;
 
 @end
 
@@ -33,6 +39,7 @@ NSString *const kLocationQuery=@"http://maps.apple.com/?q=%@";
 {
     self = [super initWithCoder:coder];
     if (self) {
+        self.tabBarItem.title=@"我";
         self.tabBarItem.image=[FontAwsomeImageHelper aboutMeTabbarItemImage];
     }
     return self;
@@ -58,6 +65,12 @@ NSString *const kLocationQuery=@"http://maps.apple.com/?q=%@";
     [self.schoolLabel addLinkToURL:[NSURL URLWithString:@"http://www.sie.edu.cn"] withRange:[self.schoolLabel.text rangeOfString:@"沈阳工程学院"]];
     [self.zhiHuDailyLabel addLinkToURL:[NSURL URLWithString:@"https://github.com/Big-Pi/ZhiHuDaily"] withRange:[self.zhiHuDailyLabel.text rangeOfString:@"ZhiHuDaily"]];
     [self.myResumeLabel addLinkToURL:[NSURL URLWithString:@"https://Big-Pi@github.com/Big-Pi/MyResume.git"] withRange:[self.myResumeLabel.text rangeOfString:@"MyResume"]];
+    [self.leanCloudLabel addLinkToURL:[NSURL URLWithString:@"https://github.com/Big-Pi/PiChat"] withRange:[self.leanCloudLabel.text rangeOfString:@"PiChat"]];
+    [self.SYNULabel addLinkToURL:[NSURL URLWithString:@"https://github.com/Big-Pi/GPAQuery"] withRange:[self.SYNULabel.text rangeOfString:@"SYNU 绩点助手"]];
+    //Blog
+    [self.bigpiLabel addLinkToURL:[NSURL URLWithString:@"http://bigpi.me"] withRange:[self.SYNULabel.text rangeOfString:@"BigPi.me"]];
+    [self.jianshuLabel addLinkToURL:[NSURL URLWithString:@"http://www.jianshu.com/users/192cd7521ac8/latest_articles"] withRange:[self.SYNULabel.text rangeOfString:@"简书"]];
+    
     
 }
 
