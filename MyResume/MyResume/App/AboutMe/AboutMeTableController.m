@@ -59,16 +59,16 @@ NSString *const kLocationQuery=@"http://maps.apple.com/?q=%@";
     
     #pragma clang diagnostic pop
     [self.locationLabel addLinkToURL:[NSURL URLWithString:location] withRange:[self.locationLabel.text rangeOfString:@"辽宁沈阳"]];
-    [self.tinyDoLabel addLinkToURL:[NSURL URLWithString:@"https://github.com/Big-Pi/TinyDo"] withRange:[self.tinyDoLabel.text rangeOfString:@"TinyDo"]];
-    [self.constGeneratorLabel addLinkToURL:[NSURL URLWithString:@"https://github.com/Big-Pi/ConstGenerator"] withRange:[self.constGeneratorLabel.text rangeOfString:@"ConstGenerator"]];
-    [self.resumeMarkDownLabel addLinkToURL:[NSURL URLWithString:@"https://github.com/Big-Pi/Resume.md"] withRange:[self.resumeMarkDownLabel.text rangeOfString:@"Markdown版"]];
+    [self.tinyDoLabel addLinkToURL:[NSURL URLWithString:@"https://github.com/iShawnWang/TinyDo"] withRange:[self.tinyDoLabel.text rangeOfString:@"TinyDo"]];
+    [self.constGeneratorLabel addLinkToURL:[NSURL URLWithString:@"https://github.com/iShawnWang/ConstGenerator"] withRange:[self.constGeneratorLabel.text rangeOfString:@"ConstGenerator"]];
+    [self.resumeMarkDownLabel addLinkToURL:[NSURL URLWithString:@"https://github.com/iShawnWang/Resume.md"] withRange:[self.resumeMarkDownLabel.text rangeOfString:@"Markdown版"]];
     [self.schoolLabel addLinkToURL:[NSURL URLWithString:@"http://www.sie.edu.cn"] withRange:[self.schoolLabel.text rangeOfString:@"沈阳工程学院"]];
-    [self.zhiHuDailyLabel addLinkToURL:[NSURL URLWithString:@"https://github.com/Big-Pi/ZhiHuDaily"] withRange:[self.zhiHuDailyLabel.text rangeOfString:@"ZhiHuDaily"]];
-    [self.myResumeLabel addLinkToURL:[NSURL URLWithString:@"https://Big-Pi@github.com/Big-Pi/MyResume.git"] withRange:[self.myResumeLabel.text rangeOfString:@"MyResume"]];
-    [self.leanCloudLabel addLinkToURL:[NSURL URLWithString:@"https://github.com/Big-Pi/PiChat"] withRange:[self.leanCloudLabel.text rangeOfString:@"PiChat"]];
-    [self.SYNULabel addLinkToURL:[NSURL URLWithString:@"https://github.com/Big-Pi/GPAQuery"] withRange:[self.SYNULabel.text rangeOfString:@"SYNU 绩点助手"]];
+    [self.zhiHuDailyLabel addLinkToURL:[NSURL URLWithString:@"https://github.com/iShawnWang/ZhiHuDaily"] withRange:[self.zhiHuDailyLabel.text rangeOfString:@"ZhiHuDaily"]];
+    [self.myResumeLabel addLinkToURL:[NSURL URLWithString:@"https://iShawnWang@github.com/iShawnWang/MyResume.git"] withRange:[self.myResumeLabel.text rangeOfString:@"MyResume"]];
+    [self.leanCloudLabel addLinkToURL:[NSURL URLWithString:@"https://github.com/iShawnWang/PiChat"] withRange:[self.leanCloudLabel.text rangeOfString:@"PiChat"]];
+    [self.SYNULabel addLinkToURL:[NSURL URLWithString:@"https://github.com/iShawnWang/GPAQuery"] withRange:[self.SYNULabel.text rangeOfString:@"SYNU 绩点助手"]];
     //Blog
-    [self.bigpiLabel addLinkToURL:[NSURL URLWithString:@"http://bigpi.me"] withRange:[self.bigpiLabel.text rangeOfString:@"BigPi.me"]];
+    [self.bigpiLabel addLinkToURL:[NSURL URLWithString:@"http://iShawn.wang"] withRange:[self.bigpiLabel.text rangeOfString:@"iShawn.wang"]];
     [self.jianshuLabel addLinkToURL:[NSURL URLWithString:@"http://www.jianshu.com/users/192cd7521ac8/latest_articles"] withRange:[self.jianshuLabel.text rangeOfString:@"简书"]];
     
     
@@ -84,9 +84,9 @@ NSString *const kLocationQuery=@"http://maps.apple.com/?q=%@";
 
 #pragma mark - Private
 - (IBAction)sendEmail:(UIBarButtonItem *)sender {
-    NSString *emailTitle = @"面试邀约~!";
-    NSString *messageBody = @":)\n您的面试邀约信息～";
-    NSArray *toRecipents = [NSArray arrayWithObject:@"wangdapishuai@163.com"];
+    NSString *emailTitle = @"Title~!";
+    NSString *messageBody = @":)\nMessages～";
+    NSArray *toRecipents = [NSArray arrayWithObject:@"iShawnWang@outlook.com"];
     
     MFMailComposeViewController *mc = [[MFMailComposeViewController alloc] init];
     mc.mailComposeDelegate = self;
